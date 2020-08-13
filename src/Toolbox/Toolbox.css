@@ -1,0 +1,15 @@
+
+.createBadge__tool{
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+.createBadge__tool__star{
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+}
+
+.createBadge__tool__star:hover, .createBadge__tool:hover{
+    cursor: pointer;
+}

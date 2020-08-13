@@ -1,0 +1,60 @@
+.createBadge{
+    display: flex;
+    flex:1;
+    padding: 40px 20px;
+    padding-bottom: 0;
+
+}
+
+.createBadge__title{
+    margin-left: 5px;
+}
+
+.createBadge__hr{
+    height: 1px;
+    border:0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.spacing{
+    flex:0.2
+}
+
+.createBadge__modelBox{
+    padding: 20px;
+    margin-top: -40px ;
+    flex:0.35;
+}
+
+.createBadge__modelBox__mobileView{
+    margin-top: 20%;
+    box-shadow: 2px 2px 2px #ededed;
+    border-radius: 10px;
+    padding: 20px;
+    height: 80%;
+    width: 260px;
+    top:0;
+    position: absolute;
+    right: 100px;
+    background-color: red;
+}
+
+.createBadge__toolBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: 10px;
+    margin-top: -40px ;
+    margin-right: -20px ;
+    flex:0.05;
+}
+
+.createBadge__tool{
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+}
+

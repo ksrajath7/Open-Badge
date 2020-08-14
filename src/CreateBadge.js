@@ -20,6 +20,10 @@ function CreateBadge() {
     const [iconModelSource, setIconModelSource] = React.useState('')
     const [textInput, setTextInput] = React.useState('')
 
+
+    const [translateIconModel, setTranslateIconModel] = React.useState('')
+    const [translateShield, setTranslateShield] = React.useState('')
+
     let toolBoxStyle = {backgroundColor:themes.background, color:themes.color}
     let modelBoxClass = "createBadge__modelBox"
     React.useEffect(() => {
@@ -40,15 +44,22 @@ function CreateBadge() {
                                                                         
                                                                         </h2>
                 <hr className="createBadge__hr" style={{backgroundColor:themes.searchBarBorder}}/>
-                <div style={{ background:"red"}}>
+                <div style={{ background:"transparent"}}>
+
                 <center>
 
-                    <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" style={{display:"inline-block", margin:"auto"}}>
-                        <path d={shieldSource} fill="#DF2F8E"/>
-                        <path d={shieldSource} fill="#DF2F8E"/>
-                        <path d={iconModelSource} fill="#333"/>
-                    </svg>
-                    <h2>{textInput}</h2>
+
+
+                <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <path d={shieldSource} fill="#FAC302" transform={translateShield}/>
+                <path d={iconModelSource} fill="#DF2F8E" transform={translateIconModel}/>
+
+                <h2>{textInput}</h2>
+                </svg>
+
+                
+
                 </center>
 
                 </div>
@@ -60,10 +71,10 @@ function CreateBadge() {
             <div className={modelBoxClass} style={{backgroundColor:themes.background, color:themes.color}}>
 
                 { shield &&
-                <Shields setShieldSource={setShieldSource} />
+                <Shields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} />
                 }
                 { iconModel &&
-                <IconModels setIconModelSource={setIconModelSource} />
+                <IconModels setIconModelSource={setIconModelSource} setTranslateIconModel={setTranslateIconModel} />
                 }
                 { text &&
                 <TextField textInput={textInput} setTextInput={setTextInput} themes={themes} />
@@ -72,7 +83,7 @@ function CreateBadge() {
             </div>
 
             <div className="createBadge__toolBox" style={toolBoxStyle}>
-                <Toolbox setShield={setShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} />
+                <Toolbox themes={themes} shield={shield} iconModel={iconModel} text={text} textCover={textCover} setShield={setShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} />
             </div>
 
         </div>

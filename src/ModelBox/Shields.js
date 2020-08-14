@@ -10,16 +10,20 @@ function Shields(props) {
     return (
         <>
             <img className="createBadge__model" src={Shield1} alt="s1" onClick={()=>{
-                props.setShieldSource(Paths.shields.s1)
+                props.setShieldSource(Paths.shields.sharp)
+                props.setTranslateShield(Paths.shields.sharpTranslate)
             }}/>
             <img className="createBadge__model" src={Shield2} alt="s2" onClick={()=>{
-                props.setShieldSource(Paths.shields.s2)
+                props.setShieldSource(Paths.shields.colar)
+                props.setTranslateShield(Paths.shields.colarTranslate)
             }}/>
             <img className="createBadge__model" src={Shield3} alt="s3" onClick={()=>{
-                props.setShieldSource(Paths.shields.s3)
+                props.setShieldSource(Paths.shields.circle)
+                props.setTranslateShield(Paths.shields.circleTranslate)
             }}/>
             <img className="createBadge__model" src={Shield4} alt="s4" onClick={()=>{
-                props.setShieldSource(Paths.shields.s4)
+                props.setShieldSource(Paths.shields.rectangle)
+                props.setTranslateShield(Paths.shields.rectangleTranslate)
             }}/>
         </>
     )

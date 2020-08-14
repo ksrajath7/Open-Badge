@@ -7,14 +7,7 @@ function SidebarRow({title, Icon, selected}) {
     const themes = React.useContext(ThemeContext)
     let selectedBackground = null
     let selectedIcon=null
-    if(selected){
-        selectedBackground={backgroundColor:themes.selectedColor}
-        selectedIcon={color:'red'}
-    }
-    else{
-        selectedBackground = null
-        selectedIcon=null
-    }
+    
     return (
         <NavLink to={`${process.env.PUBLIC_URL}/${title}`} style={{textDecoration:'none'}} activeStyle={{color:'red'}}>
             <div className="sidebarRow" style={selectedBackground} >

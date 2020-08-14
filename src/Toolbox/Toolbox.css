@@ -1,15 +1,43 @@
 
 .createBadge__tool{
-    height: 50px;
-    width: 50px;
-    margin-top: 20px;
-}
-.createBadge__tool__star{
     height: 40px;
     width: 40px;
-    margin-top: 20px;
+    display:flex;
+    margin: auto;
 }
 
-.createBadge__tool__star:hover, .createBadge__tool:hover{
+.frame{
+    border-radius: 10px;
+    border:none;
+    height: 50px;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.createBadge__tool__star{
+    height: 30px;
+    display:flex;
+    margin: auto;
+    width: 30px;
+}
+
+
+.frame:hover{
     cursor: pointer;
+    background-color: tan;
+}
+
+
+.frame:active{
+    cursor: pointer;
+    background-color: #616161;
+}
+
+.frame.selected{
+    cursor: pointer;
+    border-radius: 10px;
+    border:3px solid tan;
+    height: 50px;
+    width: 60px;
+    margin-bottom: 20px;
 }

@@ -12,7 +12,7 @@ function TextField(props) {
                             onChange={e=>props.setTextInput(e.target.value)}
                             type="text"
                             placeholder="Enter your text here"/>
-                        <Button onClick={()=>{props.setTextInput('')}} style={{borderRadius:"0px"}}>Clear</Button>
+                        <Button onClick={()=>{props.setTextInput('')}} style={{borderRadius:"0px", color:props.themes.color}}>Clear</Button>
                         
                         </div>
         </>

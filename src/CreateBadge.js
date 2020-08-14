@@ -55,9 +55,9 @@ function CreateBadge() {
                 <path d={shieldSource} fill="#FAC302" transform={translateShield}/>
                 <path d={iconModelSource} fill="#DF2F8E" transform={translateIconModel}/>
 
-                <h2>{textInput}</h2>
                 </svg>
 
+                <h2>{textInput}</h2>
                 
 
                 </center>

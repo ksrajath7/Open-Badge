@@ -13,34 +13,54 @@ import Paths from '../ModelBox/Paths/Paths'
 function IconModels(props) {
     return (
         <>
-           <img className="createBadge__model__IconModels" src={Star} alt="i1" onClick={()=>{
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.star)
                 props.setTranslateIconModel(Paths.iconModels.starTranslate)
-            }}/>
-            <img className="createBadge__model__IconModels" src={Diamond} alt="i2" onClick={()=>{
+            }}>
+           <img className="createBadge__model__IconModels" src={Star} alt="i1"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.diamond)
                 props.setTranslateIconModel(Paths.iconModels.diamondTranslate)
-            }}/>
-            <img className="createBadge__model__IconModels" src={Crown} alt="i3" onClick={()=>{
+            }}>
+            <img className="createBadge__model__IconModels" src={Diamond} alt="i2"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.crown)
                 props.setTranslateIconModel(Paths.iconModels.crownTranslate)
-            }}/>
-            <img className="createBadge__model__IconModels" src={Pencil} alt="i4" onClick={()=>{
+            }}>
+            <img className="createBadge__model__IconModels" src={Crown} alt="i3"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.pencil)
                 props.setTranslateIconModel(Paths.iconModels.pencilTranslate)
-            }}/>
-            <img className="createBadge__model__IconModels" src={Graduate} alt="i4" onClick={()=>{
+            }}>
+            <img className="createBadge__model__IconModels" src={Pencil} alt="i4"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.graduate)
                 props.setTranslateIconModel(Paths.iconModels.graduateTranslate)
-            }}/>
-            <img className="createBadge__model__IconModels" src={Institution} alt="i4" onClick={()=>{
+            }}>
+            <img className="createBadge__model__IconModels" src={Graduate} alt="i4"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.institution)
                 props.setTranslateIconModel(Paths.iconModels.institutionTranslate)
-            }}/>
-            <img className="createBadge__model__IconModels" src={Growth} alt="i4" onClick={()=>{
+            }}>
+            <img className="createBadge__model__IconModels" src={Institution} alt="i4"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
                 props.setIconModelSource(Paths.iconModels.growth)
                 props.setTranslateIconModel(Paths.iconModels.growthTranslate)
-            }}/>
+            }}>
+            <img className="createBadge__model__IconModels" src={Growth} alt="i4"/>
+        </button>
+        <button className="modelFrame" onClick={()=>{
+                props.setIconModelSource('')
+                props.setTranslateIconModel('')
+            }}>
+            <h2>CLEAR</h2>
+        </button>
         </>
     )
 }

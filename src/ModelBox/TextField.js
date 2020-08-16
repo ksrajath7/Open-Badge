@@ -8,11 +8,11 @@ function TextField(props) {
         <>
             <div className="searchBar2"  style={{borderColor:props.themes.searchBarBorder}}>
                         <input style={{backgroundColor:props.themes.searchBar, color:props.themes.color}}
-                            value={props.textInput}
-                            onChange={e=>props.setTextInput(e.target.value)}
+                            value={props.textInputSource}
+                            onChange={e=>props.setTextInputSource(e.target.value)}
                             type="text"
                             placeholder="Enter your text here"/>
-                        <Button onClick={()=>{props.setTextInput('')}} style={{borderRadius:"0px", color:props.themes.color}}>Clear</Button>
+                        <Button onClick={()=>{props.setTextInputSource('')}} style={{borderRadius:"0px", color:props.themes.color}}>Clear</Button>
                         
                         </div>
         </>

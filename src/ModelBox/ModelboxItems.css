@@ -2,18 +2,51 @@
 .createBadge__model{
     height: 80px;
     width: 80px;
-    margin-top: 20px;
-    margin-right: 20px;
+    display: flex;
+    margin: auto;
 }
+
 .createBadge__model__IconModels{
     height: 65px;
     width: 65px;
-    margin-top: 20px;
-    margin-right: 20px;
+    display: flex;
+    margin: auto;
+}
+
+.modelFrame{
+    cursor: pointer;
+    border:none;
+    background-color: transparent;
+    height: 100px;
+    width: 110px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.modelFrame:hover{
+    border:2px solid tan;
+    cursor: pointer;
+}
+
+.modelFrame:focus{
+    border:none;
+}
+
+.modelFrame.selected{
+    cursor: pointer;
+    border:1px solid tan;
+    background-color: transparent;
+    height: 100px;
+    width: 110px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .searchBar2{
     display:flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border:1px solid;
 }

@@ -16,7 +16,7 @@
     cursor: pointer;
     width: 60px;
     height: 30px;
-    background: #f4f4f4;
+    background: #2c008a;
     border-radius: 100px;
     position: relative;
     transition: background-color .2s;
@@ -33,13 +33,13 @@
     transition: 0.2s;
     background-position: center;
     background-size: cover;
-    background-image: url(https://maxcdn.icons8.com/app/uploads/2019/06/digital-illustration-brian-edward-miller-5.jpg);
+    background-image: url(../Assets/LightTheme.svg);
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
   }
   
   .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
     left: calc(100% - 2px);
-    background-image: url(https://maxcdn.icons8.com/app/uploads/2019/06/digital-illustration-brian-edward-miller-15.jpg);
+    background-image: url(../Assets/DarkTheme.svg);
     transform: translateX(-100%);
   }
   

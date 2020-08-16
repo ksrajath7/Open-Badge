@@ -1,13 +1,20 @@
+
+.headerContainer{
+    display:flex;
+    flex-direction: column;
+    position: sticky;
+    top:0;
+}
+
 .header{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     z-index:300;
 }
 
 .header__logo{
-    height: 25px;
     margin-left: 10px;
     object-fit: contain;
 }
@@ -18,27 +25,9 @@
 }
 
 .header__icons{
+    color:white;
     display:flex;
     align-items: center;
 }
 
-.header__input{
-    display:flex;
-    align-items: center;
-    width:40%;
-    border:1px solid;
-}
 
-.header__icon{
-    margin-right:10px;
-}
-
-.header__inputButton{
-    width:50px !important;
-}
-
-.header__input > input{
-    flex:1;
-    padding: 10px;
-    border: none;
-}

@@ -2,9 +2,9 @@ import React from 'react'
 import ThemeContext from './theme-context'
 import './CreateBadge.css'
 import Shields from './ModelBox/Shields'
-import Toolbox from './Toolbox/Toolbox'
 import IconModels from './ModelBox/IconModels'
 import TextField from './ModelBox/TextField'
+import Toolbox from './Toolbox/Toolbox'
 
 function CreateBadge() {
     const themes = React.useContext(ThemeContext)
@@ -19,7 +19,6 @@ function CreateBadge() {
     const [shieldSource, setShieldSource] = React.useState('')
     const [iconModelSource, setIconModelSource] = React.useState('')
     const [textInput, setTextInput] = React.useState('')
-
 
     const [translateIconModel, setTranslateIconModel] = React.useState('')
     const [translateShield, setTranslateShield] = React.useState('')
@@ -66,8 +65,6 @@ function CreateBadge() {
 
             </div>
 
-            <div className="spacing"></div>
-
             <div className={modelBoxClass} style={{backgroundColor:themes.background, color:themes.color}}>
 
                 { shield &&
@@ -81,10 +78,11 @@ function CreateBadge() {
                 }
 
             </div>
+            
 
             <div className="createBadge__toolBox" style={toolBoxStyle}>
                 <Toolbox themes={themes} shield={shield} iconModel={iconModel} text={text} textCover={textCover} setShield={setShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} />
-            </div>
+            </div> 
 
         </div>
     )

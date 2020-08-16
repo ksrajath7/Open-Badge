@@ -3,6 +3,9 @@ import ThemeContext from './theme-context'
 import './BadgeDetails.css'
 
 function BadgeDetails(props) {
+
+    console.log("hi from BadgeDetails")
+
     const themes = React.useContext(ThemeContext)
     
     const [isUpload, setIsUpload] = React.useState(true)

@@ -10,6 +10,8 @@ import BadgeDetails from './BadgeDetails';
 import NotFound from './NotFound/NotFound';
 
 function App() {
+
+  console.log("hi from App")
   
   let themeValue = themes.light
   const [darkTheme, setTheme] = React.useState(false)

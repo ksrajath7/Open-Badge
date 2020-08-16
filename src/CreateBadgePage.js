@@ -9,8 +9,10 @@ import './CreateBadgePage.css'
 import { Link } from 'react-router-dom'
 
 function CreateBadgePage() {
+
+    console.log("hi from CreateBadgePage")
     const themes = React.useContext(ThemeContext)
-    const [badgeId, setBadgeId] = React.useState('')
+    const [badgeId] = React.useState('123456')
 
     const [shield, setShield] = React.useState(true)
     const [iconModel, setIconModel] = React.useState(false)
@@ -18,13 +20,13 @@ function CreateBadgePage() {
     const [textCover, setTextCover] = React.useState(false)
     const [presetVisible, setPresetVisible] = React.useState(true)
 
-    const [shieldSource, setShieldSource] = React.useState('')
-    const [iconModelSource, setIconModelSource] = React.useState('')
-    const [textInputSource, setTextInputSource] = React.useState('')
-    const [textCoverSource, setTextCoverSource] = React.useState('')
+    const [shieldSource, setShieldSource] = React.useState()
+    const [iconModelSource, setIconModelSource] = React.useState()
+    const [textInputSource, setTextInputSource] = React.useState()
+    const [textCoverSource, setTextCoverSource] = React.useState()
 
-    const [translateIconModel, setTranslateIconModel] = React.useState('')
-    const [translateShield, setTranslateShield] = React.useState('')
+    const [translateIconModel, setTranslateIconModel] = React.useState()
+    const [translateShield, setTranslateShield] = React.useState()
 
     const [width, setWidth] = React.useState(window.innerWidth)
     const breakpoint = 800
@@ -45,7 +47,6 @@ function CreateBadgePage() {
           svg = "auto"
       }
 
-    setBadgeId('185746a')
 
     return (
         <div className="createBadgePage">

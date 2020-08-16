@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Open-Badge/static/css/main.23fa6937.chunk.css",
+    "main.js": "/Open-Badge/static/js/main.b27e4613.chunk.js",
+    "main.js.map": "/Open-Badge/static/js/main.b27e4613.chunk.js.map",
+    "runtime-main.js": "/Open-Badge/static/js/runtime-main.e8fcf448.js",
+    "runtime-main.js.map": "/Open-Badge/static/js/runtime-main.e8fcf448.js.map",
+    "static/js/2.917648d8.chunk.js": "/Open-Badge/static/js/2.917648d8.chunk.js",
+    "static/js/2.917648d8.chunk.js.map": "/Open-Badge/static/js/2.917648d8.chunk.js.map",
+    "index.html": "/Open-Badge/index.html",
+    "precache-manifest.1e234677f41858a7452ab733a191a638.js": "/Open-Badge/precache-manifest.1e234677f41858a7452ab733a191a638.js",
+    "service-worker.js": "/Open-Badge/service-worker.js",
+    "static/css/main.23fa6937.chunk.css.map": "/Open-Badge/static/css/main.23fa6937.chunk.css.map",
+    "static/js/2.917648d8.chunk.js.LICENSE.txt": "/Open-Badge/static/js/2.917648d8.chunk.js.LICENSE.txt",
+    "static/media/Crown.svg": "/Open-Badge/static/media/Crown.0867e3aa.svg",
+    "static/media/Switch.css": "/Open-Badge/static/media/LightTheme.96da0199.svg",
+    "static/media/Diamond.svg": "/Open-Badge/static/media/Diamond.9dd257e9.svg",
+    "static/media/Graduate.svg": "/Open-Badge/static/media/Graduate.06f8899d.svg",
+    "static/media/Growth.svg": "/Open-Badge/static/media/Growth.42c51cad.svg",
+    "static/media/Icon.svg": "/Open-Badge/static/media/Icon.68126e31.svg",
+    "static/media/Institution.svg": "/Open-Badge/static/media/Institution.9b8fe53d.svg",
+    "static/media/Notification.svg": "/Open-Badge/static/media/Notification.05e16d06.svg",
+    "static/media/OpenBadge.svg": "/Open-Badge/static/media/OpenBadge.525f7ce5.svg",
+    "static/media/Pencil.svg": "/Open-Badge/static/media/Pencil.228ea46a.svg",
+    "static/media/Shield.svg": "/Open-Badge/static/media/Shield.c9f56440.svg",
+    "static/media/Shield1.svg": "/Open-Badge/static/media/Shield1.df646a4f.svg",
+    "static/media/Shield2.svg": "/Open-Badge/static/media/Shield2.c0d08f40.svg",
+    "static/media/Shield3.svg": "/Open-Badge/static/media/Shield3.308210d7.svg",
+    "static/media/Shield4.svg": "/Open-Badge/static/media/Shield4.be4cb991.svg",
+    "static/media/Star.svg": "/Open-Badge/static/media/Star.e23f8bb5.svg",
+    "static/media/Text.svg": "/Open-Badge/static/media/Text.c9c83ec1.svg",
+    "static/media/TextCover.svg": "/Open-Badge/static/media/TextCover.6899e1f8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8fcf448.js",
+    "static/js/2.917648d8.chunk.js",
+    "static/css/main.23fa6937.chunk.css",
+    "static/js/main.b27e4613.chunk.js"
+  ]
+}

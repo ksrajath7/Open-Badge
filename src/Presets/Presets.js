@@ -1,5 +1,5 @@
 import React from 'react'
-import Shield from '../Assets/Shield.svg'
+// import Shield from '../Assets/Shield.svg'
 import Paths from '../ModelBox/Paths/Paths'
 import './Presets.css'
 

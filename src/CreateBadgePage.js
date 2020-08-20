@@ -35,7 +35,7 @@ function CreateBadgePage() {
     const [innerColor, setInnerColor] = React.useState('#5200ff')
     const [iconModelColor, setIconModelColor] = React.useState('#fff')
     const [textInputColor, setTextInputColor] = React.useState('red')
-    const [textCoverColor, setTextCoverColor] = React.useState('')
+    // const [textCoverColor, setTextCoverColor] = React.useState('')
 
     const [translateIconModel, setTranslateIconModel] = React.useState()
     const [translateShield, setTranslateShield] = React.useState()

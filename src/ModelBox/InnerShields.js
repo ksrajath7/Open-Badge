@@ -2,14 +2,16 @@ import React from 'react'
 import './ModelboxItems.css'
 import Paths from '../ModelBox/Paths/Paths'
 
-function IconModels(props) {
+function InnerShields(props) {
     return (
         <>
         {
-            Paths.iconModels.map(element=>
-                <button key={element.path} className="modelFrame" onClick={()=>{
-                    props.setIconModelSource(element.path)
-                    props.setTranslateIconModel(element.pathTranslate)
+            Paths.shields.map(element=>
+                <button key={element.inner} className="modelFrame" onClick={()=>{
+                    props.setInnerSource(element.inner)
+                    props.setTranslateInner(element.innerTranslate)
+                    props.setShieldSource(element.path)
+                    props.setTranslateShield(element.pathTranslate)
                 }}>
                     <svg fill="#5200ff" className="createBadge__model" height="322" width="322" viewBox="0 0 322 322">
                         <path d={element.path} transform={element.pathTranslate}></path>
@@ -21,4 +23,4 @@ function IconModels(props) {
     )
 }
 
-export default IconModels
+export default InnerShields

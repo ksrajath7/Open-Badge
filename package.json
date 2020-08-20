@@ -11,8 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "text-to-svg": "^3.1.5"
+    "react-scripts": "3.4.3"
   },
   "homepage": "http://ksrajath.github.io/Open-Badge",
   "scripts": {

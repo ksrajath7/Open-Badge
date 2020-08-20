@@ -7,7 +7,7 @@ import OpenBadge from './Assets/OpenBadge.svg'
 import Notification from './Assets/Notification.svg'
 import { Link } from "react-router-dom";
 import ThemeContext from './theme-context'
-import Switch from './Switch/Switch'
+// import Switch from './Switch/Switch'
 import './Header.css'
 import SidebarCollapsable from './SidebarCollapsable'
 
@@ -49,10 +49,10 @@ function Header(props) {
                 <div className="header__icons" >
                     <img className="header__logo" src={Notification} alt="LOGO"></img>
                     
-                    <Switch
+                    {/* <Switch
                         isOn={props.theme}
                         handleToggle={()=>props.setTheme(!props.theme)}
-                    />
+                    /> */}
                     <Avatar alt="DP" src="" style={{marginLeft:'20px', marginRight:"10px"}}/>
                 </div>
            

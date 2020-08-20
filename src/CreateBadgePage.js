@@ -5,8 +5,11 @@ import Toolbox from './Toolbox/Toolbox'
 import Shields from './ModelBox/Shields'
 import IconModels from './ModelBox/IconModels'
 import TextField from './ModelBox/TextField'
+import Paths from './ModelBox/Paths/Paths'
 import './CreateBadgePage.css'
 import { Link } from 'react-router-dom'
+import InnerShields from './ModelBox/InnerShields'
+import Colors from './ModelBox/Colors'
 
 function CreateBadgePage() {
 
@@ -14,19 +17,29 @@ function CreateBadgePage() {
     const themes = React.useContext(ThemeContext)
     const [badgeId] = React.useState('123456')
 
-    const [shield, setShield] = React.useState(true)
+    const [shield, setShield] = React.useState(false)
+    const [innerShield, setInnerShield] = React.useState(true)
     const [iconModel, setIconModel] = React.useState(false)
     const [text, setText] = React.useState(false)
+    const [colors, setColors] = React.useState(false)
     const [textCover, setTextCover] = React.useState(false)
     const [presetVisible, setPresetVisible] = React.useState(true)
 
-    const [shieldSource, setShieldSource] = React.useState()
-    const [iconModelSource, setIconModelSource] = React.useState()
-    const [textInputSource, setTextInputSource] = React.useState()
-    const [textCoverSource, setTextCoverSource] = React.useState()
+    const [shieldSource, setShieldSource] = React.useState('')
+    const [innerSource, setInnerSource] = React.useState('')
+    const [iconModelSource, setIconModelSource] = React.useState('')
+    const [textInputSource, setTextInputSource] = React.useState('')
+    const [textCoverSource, setTextCoverSource] = React.useState('')
+    
+    const [shieldColor, setShieldColor] = React.useState('#8200ff')
+    const [innerColor, setInnerColor] = React.useState('#5200ff')
+    const [iconModelColor, setIconModelColor] = React.useState('#fff')
+    const [textInputColor, setTextInputColor] = React.useState('red')
+    const [textCoverColor, setTextCoverColor] = React.useState('')
 
     const [translateIconModel, setTranslateIconModel] = React.useState()
     const [translateShield, setTranslateShield] = React.useState()
+    const [translateInner, setTranslateInner] = React.useState()
 
     const [width, setWidth] = React.useState(window.innerWidth)
     const breakpoint = 800
@@ -39,7 +52,7 @@ function CreateBadgePage() {
       
       let createStyle = {backgroundColor:themes.sectionBackground, flex:"0.6"}
       let detailsInputClassName = "badgeName"
-      let svg = "320"
+      let svg = "322"
 
       if(width<=breakpoint){
           createStyle.flex="1"
@@ -57,7 +70,7 @@ function CreateBadgePage() {
                     Presets
                 </div>
                 <div className="presets">
-                    <Presets themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setIconModelSource={setIconModelSource} ></Presets>
+                    <Presets themes={themes} setShieldColor={setShieldColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel}></Presets>
                 </div>
                 <hr style={{backgroundColor:themes.searchBarBorder}}/>
             </div>
@@ -73,11 +86,23 @@ function CreateBadgePage() {
                     <div className="presetLabel__mobileView" onClick={()=>{
                         setPresetVisible(!presetVisible)
                     }}>
-                        Presets
+                        <div style={{flex:"1"}}>
+                            Presets
+                        </div>
+                        { !presetVisible &&
+                        <div style={{color:themes.spanColor}}>
+                            Show
+                        </div>
+                        }
+                        { presetVisible &&
+                        <div style={{color:themes.spanColor}}>
+                            Hide
+                        </div>
+                        }
                     </div>
                     { presetVisible &&
                     <div className="presets__mobileView">
-                        <Presets themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setIconModelSource={setIconModelSource} ></Presets>
+                        <Presets setShieldColor={setShieldColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} ></Presets>
                     </div>
                     }
                 </div>
@@ -87,40 +112,59 @@ function CreateBadgePage() {
 
                 <div className="canvas" style={{backgroundColor:themes.background, color:themes.color}}>
 
+                        { (!shieldSource && !iconModelSource && !textInputSource) &&
                         <center>
-                        <svg width={svg} height={svg} viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                        <path d={shieldSource} fill="#FAC302" transform={translateShield}/>
-                        <path d={iconModelSource} fill="#DF2F8E" transform={translateIconModel}/>
-
+                        <svg width={svg} height={svg} viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path transform={Paths.shields[0].pathTranslate} fill="#eee" d={Paths.shields[0].path}/>
+                            </g>
                         </svg>
-
-                        <h2>{textCoverSource}{textInputSource}</h2>
                         </center>
-
+                        }
+                        { (shieldSource || iconModelSource || textInputSource) &&
+                        <center>
+                        <svg width={svg} height={svg} viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d={shieldSource} fill={shieldColor} transform={translateShield}/>
+                                <path d={innerSource} fill={innerColor} transform={translateInner}/>
+                                <path d={iconModelSource} fill={iconModelColor} transform={translateIconModel}/>
+                                <text x="50%" y="70%" fontSize="40px" fill={textInputColor} textAnchor="middle">{textInputSource}</text>
+                            </g>
+                        </svg>
+                        </center>
+                        }
+                        {textCoverSource}
                 </div>
 
 
                 { width<=breakpoint &&
 
                 <div className="tools__mobileView" style={{backgroundColor:themes.background, color:themes.color}}>
-                    <Toolbox themes={themes} shield={shield} iconModel={iconModel} text={text} textCover={textCover} setShield={setShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} />
+                    <Toolbox themes={themes} shield={shield} innerShield={innerShield} iconModel={iconModel} text={text} textCover={textCover} colors={colors} setShield={setShield} setInnerShield={setInnerShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} setColors={setColors} />
                 </div>
                 }
 
                 
                 { width<=breakpoint &&
-                <div className="modelsContainer__mobileView" style={{backgroundColor:themes.background, color:themes.color}}>
+                <div className="models" style={{backgroundColor:themes.background, color:themes.color}}>
                     <div className="modelsContainer">
-                        { shield &&
-                        <Shields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} />
-                        }
-                        { iconModel &&
-                        <IconModels setIconModelSource={setIconModelSource} setTranslateIconModel={setTranslateIconModel} />
-                        }
-                        { text &&
-                        <TextField textInputSource={textInputSource} setTextInputSource={setTextInputSource} themes={themes} />
-                        }
+                    { shield &&
+                    <Shields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} />
+                    }
+                    { innerShield &&
+                    <InnerShields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setInnerSource={setInnerSource}/>
+                    }
+                    { iconModel &&
+                    <IconModels setIconModelSource={setIconModelSource} setTranslateIconModel={setTranslateIconModel} />
+                    }
+                    { text &&
+                    <TextField textInputSource={textInputSource} setTextInputSource={setTextInputSource} themes={themes} />
+                    }
+                    { colors &&
+                    <div style={{width:"100%"}}>
+                        <Colors setShieldColor={setShieldColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} />
+                    </div>
+                    }
                     </div>
                 </div>
                 }
@@ -154,11 +198,17 @@ function CreateBadgePage() {
                     { shield &&
                     <Shields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} />
                     }
+                    { innerShield &&
+                    <InnerShields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setInnerSource={setInnerSource}/>
+                    }
                     { iconModel &&
                     <IconModels setIconModelSource={setIconModelSource} setTranslateIconModel={setTranslateIconModel} />
                     }
                     { text &&
                     <TextField textInputSource={textInputSource} setTextInputSource={setTextInputSource} themes={themes} />
+                    }
+                    { colors &&
+                    <Colors setShieldColor={setShieldColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} />
                     }
                 </div>
             </div>
@@ -166,7 +216,7 @@ function CreateBadgePage() {
             
             { width>breakpoint &&
             <div className="tools" style={{backgroundColor:themes.background, color:themes.color}}>
-                <Toolbox themes={themes} shield={shield} iconModel={iconModel} text={text} textCover={textCover} setShield={setShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} />
+                <Toolbox themes={themes} shield={shield} innerShield={innerShield} iconModel={iconModel} text={text} textCover={textCover} colors={colors} setShield={setShield} setInnerShield={setInnerShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} setColors={setColors} />
             </div>
             }
         </div>

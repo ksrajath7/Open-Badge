@@ -49,7 +49,7 @@ function CreateBadge() {
 
 
 
-                <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="322" height="322" viewBox="0 0 322 322" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 <path d={shieldSource} fill="#FAC302" transform={translateShield}/>
                 <path d={iconModelSource} fill="#DF2F8E" transform={translateIconModel}/>

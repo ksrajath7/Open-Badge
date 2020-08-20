@@ -10,7 +10,6 @@ function Toolbox(props) {
     return (
         <>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.innerShield && "selected"}`}  onClick={()=>{
-                    props.setShield(false)
                     props.setInnerShield(true)
                     props.setIconModel(false)
                     props.setText(false)
@@ -21,7 +20,6 @@ function Toolbox(props) {
             <img className="createBadge__tool" src={Inner} alt="shield"/>
         </button>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.iconModel && "selected"}`} onClick={()=>{
-                props.setShield(false)
                 props.setInnerShield(false)
                 props.setIconModel(true)
                 props.setText(false)
@@ -32,7 +30,6 @@ function Toolbox(props) {
             <img className="createBadge__tool__star" src={IconModel} alt="icon"/>
         </button>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.text && "selected"}`} onClick={()=>{
-                props.setShield(false)
                 props.setInnerShield(false)
                 props.setIconModel(false)
                 props.setText(true)
@@ -43,7 +40,6 @@ function Toolbox(props) {
             <img className="createBadge__tool__star" src={Text} alt="tex"/>
         </button>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.colors && "selected"}`} onClick={()=>{
-                props.setShield(false)
                 props.setInnerShield(false)
                 props.setIconModel(false)
                 props.setText(false)
@@ -53,16 +49,6 @@ function Toolbox(props) {
                 }}>
             <img className="createBadge__tool__star" src={TextCover} alt="tex"/>
         </button>
-        {/* <button style={{background:props.themes.sectionBackground}} className={`frame ${props.shield && "selected"}`}  onClick={()=>{
-                    props.setShield(true)
-                    props.setInnerShield(false)
-                    props.setIconModel(false)
-                    props.setText(false)
-                    props.setTextCover(false)
-                    
-                    }}>
-            <img className="createBadge__tool" src={Shield} alt="shield"/>
-        </button> */}
         </>
     )
 }

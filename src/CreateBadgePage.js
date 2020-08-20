@@ -2,7 +2,6 @@ import React from 'react'
 import ThemeContext from './theme-context'
 import Presets from './Presets/Presets'
 import Toolbox from './Toolbox/Toolbox'
-import Shields from './ModelBox/Shields'
 import IconModels from './ModelBox/IconModels'
 import TextField from './ModelBox/TextField'
 import Colors from './ModelBox/Colors'
@@ -16,7 +15,6 @@ function CreateBadgePage() {
     const themes = React.useContext(ThemeContext)
     const [badgeId] = React.useState('123456')
 
-    const [shield, setShield] = React.useState(false)
     const [innerShield, setInnerShield] = React.useState(true)
     const [iconModel, setIconModel] = React.useState(false)
     const [text, setText] = React.useState(false)
@@ -137,7 +135,7 @@ function CreateBadgePage() {
                 { width<=breakpoint &&
 
                 <div className="tools__mobileView" style={{backgroundColor:themes.background, color:themes.color}}>
-                    <Toolbox themes={themes} shield={shield} innerShield={innerShield} iconModel={iconModel} text={text} textCover={textCover} colors={colors} setShield={setShield} setInnerShield={setInnerShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} setColors={setColors} />
+                    <Toolbox themes={themes} innerShield={innerShield} iconModel={iconModel} text={text} textCover={textCover} colors={colors} setInnerShield={setInnerShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} setColors={setColors} />
                 </div>
                 }
 
@@ -145,9 +143,6 @@ function CreateBadgePage() {
                 { width<=breakpoint &&
                 <div className="models" style={{backgroundColor:themes.background, color:themes.color}}>
                     <div className="modelsContainer">
-                    { shield &&
-                    <Shields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} />
-                    }
                     { innerShield &&
                     <InnerShields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setInnerSource={setInnerSource}/>
                     }
@@ -192,9 +187,6 @@ function CreateBadgePage() {
             { width>breakpoint &&
             <div className="models" style={{backgroundColor:themes.background, color:themes.color}}>
                 <div className="modelsContainer">
-                    { shield &&
-                    <Shields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} />
-                    }
                     { innerShield &&
                     <InnerShields setShieldSource={setShieldSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setInnerSource={setInnerSource}/>
                     }
@@ -213,7 +205,7 @@ function CreateBadgePage() {
             
             { width>breakpoint &&
             <div className="tools" style={{backgroundColor:themes.background, color:themes.color}}>
-                <Toolbox themes={themes} shield={shield} innerShield={innerShield} iconModel={iconModel} text={text} textCover={textCover} colors={colors} setShield={setShield} setInnerShield={setInnerShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} setColors={setColors} />
+                <Toolbox themes={themes} innerShield={innerShield} iconModel={iconModel} text={text} textCover={textCover} colors={colors} setInnerShield={setInnerShield} setIconModel={setIconModel} setText={setText} setTextCover={setTextCover} setColors={setColors} />
             </div>
             }
         </div>

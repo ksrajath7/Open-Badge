@@ -1,9 +1,8 @@
 import React from 'react';
 import Header from './Header'
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css'
-import SearchPage from './SearchPage';
 import ThemeContext, { themes } from './theme-context'
 import CreateBadgePage from './CreateBadgePage';
 import BadgeDetails from './BadgeDetails';
@@ -36,13 +35,6 @@ function App() {
               }>
             
             </Route>
-          
-          <Route path={`${process.env.PUBLIC_URL}/search/:searchTerm`} render={
-            (props)=><div className="app__page"   style={{backgroundColor:themeValue.background}}>
-              <Sidebar/>
-              <SearchPage a={props.match.params.searchTerm}/></div>} >
-          
-          </Route>
 
           <Route path={`${process.env.PUBLIC_URL}/badge/:badgeId`} render={
             (props)=>

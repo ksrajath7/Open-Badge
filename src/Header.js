@@ -14,10 +14,10 @@ import SidebarCollapsable from './SidebarCollapsable'
 function Header(props) {
 
     const themes = React.useContext(ThemeContext)
+    const [collapse, setCollapse] = React.useState(false)
 
     const [width, setWidth] = React.useState(window.innerWidth)
-    const [collapse, setCollapse] = React.useState(false)
-    const breakpoint = 620
+    const breakpoint = 800
 
     React.useEffect(() => {
         

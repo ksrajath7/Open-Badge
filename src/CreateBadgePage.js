@@ -5,15 +5,14 @@ import Toolbox from './Toolbox/Toolbox'
 import Shields from './ModelBox/Shields'
 import IconModels from './ModelBox/IconModels'
 import TextField from './ModelBox/TextField'
+import Colors from './ModelBox/Colors'
 import Paths from './ModelBox/Paths/Paths'
 import './CreateBadgePage.css'
 import { Link } from 'react-router-dom'
 import InnerShields from './ModelBox/InnerShields'
-import Colors from './ModelBox/Colors'
 
 function CreateBadgePage() {
 
-    console.log("hi from CreateBadgePage")
     const themes = React.useContext(ThemeContext)
     const [badgeId] = React.useState('123456')
 
@@ -60,7 +59,6 @@ function CreateBadgePage() {
           svg = "auto"
       }
 
-
     return (
         <div className="createBadgePage">
             
@@ -75,7 +73,6 @@ function CreateBadgePage() {
                 <hr style={{backgroundColor:themes.searchBarBorder}}/>
             </div>
             }
-            
 
             <div className="create" style={createStyle}>
 

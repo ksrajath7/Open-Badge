@@ -1,7 +1,6 @@
 import React from 'react'
 import './Toolbox.css'
 import IconModel from '../Assets/Icon.svg'
-// import Shield from '../Assets/Border.svg'
 import Inner from '../Assets/Inner.svg'
 import Text from '../Assets/Text.svg'
 import TextCover from '../Assets/TextCover.svg'

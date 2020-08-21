@@ -73,7 +73,7 @@ function CreateBadgePage() {
             { width>breakpoint &&
             <div className="presetTab" style={{backgroundColor:themes.background, color:themes.color}}>
                 <div className="presetLabel" >
-                    Edit Presets
+                    Presets
                 </div>
                 <div className="presets">
                     <Presets themes={themes} setEditPreset={setEditPreset} setShieldColor={setShieldColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel}></Presets>
@@ -92,7 +92,7 @@ function CreateBadgePage() {
                         setPresetVisible(!presetVisible)
                     }}>
                         <div style={{flex:"1"}}>
-                            Edit Presets
+                            Presets
                         </div>
                         { !presetVisible &&
                         <div style={{color:themes.spanColor, cursor:"pointer"}}>
@@ -107,7 +107,7 @@ function CreateBadgePage() {
                     </div>
                     { presetVisible &&
                     <div className="presets__mobileView">
-                        <Presets setShieldColor={setShieldColor} setPresetVisible={setPresetVisible} setEditPreset={setEditPreset} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} ></Presets>
+                        <Presets setShieldColor={setShieldColor} setEditPreset={setEditPreset} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} ></Presets>
                     </div>
                     }
                 </div>
@@ -131,7 +131,8 @@ function CreateBadgePage() {
                                 // setTranslateInner(Paths.shields[0].innerTranslate)
                                 setPresetVisible(false)
                                 setEditPreset(true)
-                            }} className="createButton" style={editButtonStyle}>Create new badge from scratch
+                                window.scrollTo(0,0)
+                            }} className="createButton" style={editButtonStyle}>Create new badge
                         </button>
                         </center>
                         }
@@ -146,7 +147,9 @@ function CreateBadgePage() {
                             </g>
                         </svg>
                         <button onClick={()=>{
+                                setPresetVisible(false)
                                 setEditPreset(true)
+                                window.scrollTo(0,0)
                             }} className="createButton" style={editButtonStyle}>Edit this style
                         </button>
 

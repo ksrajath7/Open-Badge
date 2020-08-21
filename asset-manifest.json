@@ -1,28 +1,34 @@
 {
   "files": {
-    "main.css": "/Open-Badge/static/css/main.18dc89f5.chunk.css",
-    "main.js": "/Open-Badge/static/js/main.c7bb5229.chunk.js",
-    "main.js.map": "/Open-Badge/static/js/main.c7bb5229.chunk.js.map",
+    "main.css": "/Open-Badge/static/css/main.2405365f.chunk.css",
+    "main.js": "/Open-Badge/static/js/main.b115bc61.chunk.js",
+    "main.js.map": "/Open-Badge/static/js/main.b115bc61.chunk.js.map",
     "runtime-main.js": "/Open-Badge/static/js/runtime-main.e8fcf448.js",
     "runtime-main.js.map": "/Open-Badge/static/js/runtime-main.e8fcf448.js.map",
-    "static/js/2.081910f4.chunk.js": "/Open-Badge/static/js/2.081910f4.chunk.js",
-    "static/js/2.081910f4.chunk.js.map": "/Open-Badge/static/js/2.081910f4.chunk.js.map",
+    "static/js/2.4e98a156.chunk.js": "/Open-Badge/static/js/2.4e98a156.chunk.js",
+    "static/js/2.4e98a156.chunk.js.map": "/Open-Badge/static/js/2.4e98a156.chunk.js.map",
     "index.html": "/Open-Badge/index.html",
-    "precache-manifest.2a3053dd70ceedfaece5881fed1ff43a.js": "/Open-Badge/precache-manifest.2a3053dd70ceedfaece5881fed1ff43a.js",
+    "precache-manifest.c38baeb779e203c9da8aab69edb0e9f5.js": "/Open-Badge/precache-manifest.c38baeb779e203c9da8aab69edb0e9f5.js",
     "service-worker.js": "/Open-Badge/service-worker.js",
-    "static/css/main.18dc89f5.chunk.css.map": "/Open-Badge/static/css/main.18dc89f5.chunk.css.map",
-    "static/js/2.081910f4.chunk.js.LICENSE.txt": "/Open-Badge/static/js/2.081910f4.chunk.js.LICENSE.txt",
+    "static/css/main.2405365f.chunk.css.map": "/Open-Badge/static/css/main.2405365f.chunk.css.map",
+    "static/js/2.4e98a156.chunk.js.LICENSE.txt": "/Open-Badge/static/js/2.4e98a156.chunk.js.LICENSE.txt",
     "static/media/Icon.svg": "/Open-Badge/static/media/Icon.68126e31.svg",
     "static/media/Inner.svg": "/Open-Badge/static/media/Inner.fc6ffbcb.svg",
     "static/media/Notification.svg": "/Open-Badge/static/media/Notification.05e16d06.svg",
     "static/media/OpenBadge.svg": "/Open-Badge/static/media/OpenBadge.525f7ce5.svg",
     "static/media/Text.svg": "/Open-Badge/static/media/Text.c9c83ec1.svg",
-    "static/media/TextCover.svg": "/Open-Badge/static/media/TextCover.6899e1f8.svg"
+    "static/media/TextCover.svg": "/Open-Badge/static/media/TextCover.6899e1f8.svg",
+    "static/media/codesandbox.svg": "/Open-Badge/static/media/codesandbox.0a83e818.svg",
+    "static/media/codesandbox1.svg": "/Open-Badge/static/media/codesandbox1.b236d370.svg",
+    "static/media/pen-tool.svg": "/Open-Badge/static/media/pen-tool.e6eb6671.svg",
+    "static/media/pen-tool1.svg": "/Open-Badge/static/media/pen-tool1.0a8e044f.svg",
+    "static/media/user.svg": "/Open-Badge/static/media/user.ed52f187.svg",
+    "static/media/user1.svg": "/Open-Badge/static/media/user1.6ac01e8a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e8fcf448.js",
-    "static/js/2.081910f4.chunk.js",
-    "static/css/main.18dc89f5.chunk.css",
-    "static/js/main.c7bb5229.chunk.js"
+    "static/js/2.4e98a156.chunk.js",
+    "static/css/main.2405365f.chunk.css",
+    "static/js/main.b115bc61.chunk.js"
   ]
 }

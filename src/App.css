@@ -3,7 +3,6 @@
 .app__page{
     font-family: Inter;
     display:flex;
-    padding-top: 25px;
     flex:1
 }
 

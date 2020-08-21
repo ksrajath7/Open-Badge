@@ -1,5 +1,4 @@
 import React from 'react'
-import Avatar from '@material-ui/core/Avatar'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
 
@@ -28,33 +27,30 @@ function Header(props) {
     return (
         <div className="headerContainer">
             <div className="header" style={{backgroundColor:themes.header}}>
+        
+                { width<=breakpoint &&
+                <div style={{color:"white"}} onClick={()=>setCollapse(!collapse)}>
+                    {collapse && <CloseIcon/>}
+                    {!collapse && <MenuIcon/>}
+                </div>
+                }
 
                 
-                <div className="header__left">
-                    {
-                    width<=breakpoint &&
-                        <div className="menuIcon__container" style={{color:"white"}} onClick={()=>setCollapse(!collapse)}>
-                            {collapse && <CloseIcon/>}
-                            {!collapse && <MenuIcon/>}
-                        </div>
-                    }
+                    <div style={{display:"flex", alignItems:"center"}}>
+                        <Link to={`${process.env.PUBLIC_URL}/`}>
+                            <img className="header__logo" src={OpenBadge} alt="LOGO"></img>
+                        </Link>
+                        { width>breakpoint &&
+                        <h2 className="header__title">Open Badge</h2>
+                        }
+                    </div>
                     
-                    <Link to={`${process.env.PUBLIC_URL}/`}>
-                        <img className="header__logo" src={OpenBadge} alt="LOGO"></img>
-                    </Link>
-                </div>
-
-
-
-                <div className="header__icons" >
-                    <img className="header__logo" src={Notification} alt="LOGO"></img>
-                    
-                    {/* <Switch
-                        isOn={props.theme}
-                        handleToggle={()=>props.setTheme(!props.theme)}
-                    /> */}
-                    <Avatar alt="DP" src="" style={{marginLeft:'20px', marginRight:"10px"}}/>
-                </div>
+                <img src={Notification} alt="noti"></img>
+                
+                {/* <Switch
+                    isOn={props.theme}
+                    handleToggle={()=>props.setTheme(!props.theme)}
+                /> */}
            
             </div>
                 { width<=breakpoint && collapse &&

@@ -82,6 +82,8 @@ function CreateBadgePage() {
             </div>
             }
 
+
+            
             <div className="create" style={createStyle}>
 
 

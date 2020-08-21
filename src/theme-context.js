@@ -19,7 +19,7 @@ export const themes={
     light:{
         color:'black',
         grayColor:"#6b7b8c",
-        selectedColor:'#f1f1f1',
+        selectedColor:'#f8f8f8',
         background:'white',
         smallColor:"red",
         sectionBackground:'#f9f9f9',

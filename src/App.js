@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from './Header'
-// import Sidebar from './Sidebar';
+import Sidebar from './Sidebar';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css'
 import ThemeContext, { themes } from './theme-context'
 import CreateBadgePage from './CreateBadgePage';
+import CreatedBadges from './CreatedBadges';
 import BadgeDetails from './BadgeDetails';
 import NotFound from './NotFound/NotFound';
+import Home from './Home';
 
 function App() {
 
@@ -31,7 +33,7 @@ function App() {
         <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}/`} render={
             ()=>
-              <CreateBadgePage/>
+              <Home/>
               }>
             
             </Route>
@@ -42,22 +44,42 @@ function App() {
               } >
           
           </Route>
-          
           <Route path={`${process.env.PUBLIC_URL}/Create Badge`} render={
             ()=>
-              <CreateBadgePage/>
+                <CreateBadgePage/>
+              }>
+          
+          </Route>
+          <Route path={`${process.env.PUBLIC_URL}/Created Badges`} render={
+            ()=>
+              <div className="app__page">
+                <Sidebar home={false} createdBadges={true} drafts={false}/>
+                <CreatedBadges title="All your created badges"/>
+              </div>
+              }>
+          
+          </Route>
+          <Route path={`${process.env.PUBLIC_URL}/Home`} render={
+            ()=>
+              <div className="app__page">
+                <Sidebar home={true} createdBadges={false} drafts={false}/>
+                <Home/>
+              </div>
+              }>
+          
+          </Route>
+          <Route path={`${process.env.PUBLIC_URL}/Drafts`} render={
+            ()=>
+              <div className="app__page">
+                <Sidebar home={false} createdBadges={false} drafts={true}/>
+                <CreatedBadges title="Drafts"/>
+              </div>
               }>
           
           </Route>
 
-
-
             <NotFound/>
 
-
-
-
-            
         </Switch>
       </BrowserRouter>
       

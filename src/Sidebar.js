@@ -1,15 +1,16 @@
 import React from 'react'
-import VideoLibraryIcon from '@material-ui/icons/VideoLibrary'
-import HistoryIcon from '@material-ui/icons/History'
+import User from './Assets/user.svg'
+import Created from './Assets/codesandbox.svg'
+import Drafts from './Assets/pen-tool.svg'
 import ThemeContext from './theme-context'
 
 import './Sidebar.css'
 import SidebarRow from './SidebarRow'
 
-function Sidebar({createBadge}) {
+function Sidebar({createdBadges, home, drafts}) {
     const themes = React.useContext(ThemeContext)
     const [width, setWidth] = React.useState(window.innerWidth)
-    const breakpoint = 620
+    const breakpoint = 800
     React.useEffect(() => {
         
         window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -20,9 +21,9 @@ function Sidebar({createBadge}) {
         return (
         
             <div className="sidebar">
-                <SidebarRow selected={createBadge} Icon={VideoLibraryIcon} title="Create Badge"/>
-                <hr style={{backgroundColor:themes.searchBarBorder}}/>
-                <SidebarRow Icon={HistoryIcon} title="History"/>
+                <SidebarRow selected={home} Icon={User} title="Home" color={themes.color} fromSidebar={true}/>
+                <SidebarRow selected={createdBadges} Icon={Created} title="Created Badges" color={themes.color} fromSidebar={true}/>
+                <SidebarRow selected={drafts} Icon={Drafts} title="Drafts" color={themes.color} fromSidebar={true}/>
             </div>
         )
     }

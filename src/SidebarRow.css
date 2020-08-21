@@ -1,21 +1,42 @@
 .sidebarRow{
     display:flex;
     align-items: center;
-    padding: 10px 20px;
-}
-.sidebarRow__icon{
-    color: grey;
-    font-size: large !important;;
+    padding: 10px 15px;
+    margin-bottom: 9px;
+    border-radius: 5px;
 }
 .sidebarRow__title{
     flex:1;
     margin-left: 10px;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 400;
 }
 .sidebarRow:hover{
     cursor: pointer;
+    background-color: #f8f8f8;
 }
 .sidebarRow:hover > .sidebarRow__icon{
     color: red;
+}
+
+.colRow{
+    margin-left: 10px;
+    margin-right: 10px;
+    display:flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin-bottom: 9px;
+    border-radius: 5px;
+}
+.colRow:hover{
+    cursor: pointer;
+    background-color: #29037a;
+}
+.colRow:hover > .sidebarRow__icon{
+    color: red;
+}
+
+
+@media (min-width: 1000px) {
+.sidebarRow{margin-left: 15px; margin-right: 15px;}
 }

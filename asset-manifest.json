@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Open-Badge/static/css/main.18dc89f5.chunk.css",
-    "main.js": "/Open-Badge/static/js/main.fddd7625.chunk.js",
-    "main.js.map": "/Open-Badge/static/js/main.fddd7625.chunk.js.map",
+    "main.js": "/Open-Badge/static/js/main.343c75e0.chunk.js",
+    "main.js.map": "/Open-Badge/static/js/main.343c75e0.chunk.js.map",
     "runtime-main.js": "/Open-Badge/static/js/runtime-main.e8fcf448.js",
     "runtime-main.js.map": "/Open-Badge/static/js/runtime-main.e8fcf448.js.map",
     "static/js/2.081910f4.chunk.js": "/Open-Badge/static/js/2.081910f4.chunk.js",
     "static/js/2.081910f4.chunk.js.map": "/Open-Badge/static/js/2.081910f4.chunk.js.map",
     "index.html": "/Open-Badge/index.html",
-    "precache-manifest.1a75ab9a66819dbc037f02ce731b9c18.js": "/Open-Badge/precache-manifest.1a75ab9a66819dbc037f02ce731b9c18.js",
+    "precache-manifest.813aab502616219ed0f20545780830f9.js": "/Open-Badge/precache-manifest.813aab502616219ed0f20545780830f9.js",
     "service-worker.js": "/Open-Badge/service-worker.js",
     "static/css/main.18dc89f5.chunk.css.map": "/Open-Badge/static/css/main.18dc89f5.chunk.css.map",
     "static/js/2.081910f4.chunk.js.LICENSE.txt": "/Open-Badge/static/js/2.081910f4.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.e8fcf448.js",
     "static/js/2.081910f4.chunk.js",
     "static/css/main.18dc89f5.chunk.css",
-    "static/js/main.fddd7625.chunk.js"
+    "static/js/main.343c75e0.chunk.js"
   ]
 }

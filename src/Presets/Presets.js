@@ -8,6 +8,7 @@ function Presets(props) {
         { Paths.presets.map((element)=>
         <button key={element.id} style={{background:props.themes.background}} className="presetFrame" onClick={()=>{
                     props.setEditPreset(false)
+                    props.setPresetVisible(false)
                     props.setShieldSource(element.path)
                     props.setTranslateShield(element.pathTranslate)
                     props.setShieldColor(element.pathColor)

@@ -63,6 +63,9 @@ function CreateBadgePage() {
           editButtonStyle.display="none"
           createStyle.flex="0.6"
       }
+      if(editPreset && width<=breakpoint){
+          editButtonStyle.display="none"
+      }
 
     return (
         <div className="createBadgePage">
@@ -104,7 +107,7 @@ function CreateBadgePage() {
                     </div>
                     { presetVisible &&
                     <div className="presets__mobileView">
-                        <Presets setShieldColor={setShieldColor} setEditPreset={setEditPreset} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} ></Presets>
+                        <Presets setShieldColor={setShieldColor} setPresetVisible={setPresetVisible} setEditPreset={setEditPreset} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextInputColor={setTextInputColor} themes={themes} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setShieldSource={setShieldSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTranslateShield={setTranslateShield} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} ></Presets>
                     </div>
                     }
                 </div>
@@ -126,6 +129,7 @@ function CreateBadgePage() {
                                 // setInnerSource(Paths.shields[0].inner)
                                 // setTranslateShield(Paths.shields[0].pathTranslate)
                                 // setTranslateInner(Paths.shields[0].innerTranslate)
+                                setPresetVisible(false)
                                 setEditPreset(true)
                             }} className="createButton" style={editButtonStyle}>Create new badge from scratch
                         </button>

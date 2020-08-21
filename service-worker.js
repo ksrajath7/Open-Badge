@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Open-Badge/precache-manifest.c38baeb779e203c9da8aab69edb0e9f5.js"
+  "/Open-Badge/precache-manifest.7cbb6a8ec2799ff45f037f2d0cf99f31.js"
 );
 
 self.addEventListener('message', (event) => {

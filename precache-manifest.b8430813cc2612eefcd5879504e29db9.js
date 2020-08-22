@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66dea504b0f7273f60056f05c059533f",
+    "revision": "5868a59bf3eb9db087b8d641640c844b",
     "url": "/Open-Badge/index.html"
   },
   {
-    "revision": "6df1eddeb6629daeb6bd",
-    "url": "/Open-Badge/static/css/main.0808da33.chunk.css"
+    "revision": "02d336599fff8cee777f",
+    "url": "/Open-Badge/static/css/main.e7b21668.chunk.css"
   },
   {
-    "revision": "98e20ec8455798c99c35",
-    "url": "/Open-Badge/static/js/2.c48a15e7.chunk.js"
+    "revision": "fbb2c125c2ad60734a9d",
+    "url": "/Open-Badge/static/js/2.572fdc86.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/Open-Badge/static/js/2.c48a15e7.chunk.js.LICENSE.txt"
+    "url": "/Open-Badge/static/js/2.572fdc86.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6df1eddeb6629daeb6bd",
-    "url": "/Open-Badge/static/js/main.d7d597fa.chunk.js"
+    "revision": "02d336599fff8cee777f",
+    "url": "/Open-Badge/static/js/main.bd451f34.chunk.js"
   },
   {
     "revision": "3b7812067c3efae3af9d",

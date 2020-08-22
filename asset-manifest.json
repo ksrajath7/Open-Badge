@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Open-Badge/static/css/main.e7b21668.chunk.css",
-    "main.js": "/Open-Badge/static/js/main.bd451f34.chunk.js",
-    "main.js.map": "/Open-Badge/static/js/main.bd451f34.chunk.js.map",
+    "main.css": "/Open-Badge/static/css/main.9dc530d7.chunk.css",
+    "main.js": "/Open-Badge/static/js/main.482ceaff.chunk.js",
+    "main.js.map": "/Open-Badge/static/js/main.482ceaff.chunk.js.map",
     "runtime-main.js": "/Open-Badge/static/js/runtime-main.e8fcf448.js",
     "runtime-main.js.map": "/Open-Badge/static/js/runtime-main.e8fcf448.js.map",
-    "static/js/2.572fdc86.chunk.js": "/Open-Badge/static/js/2.572fdc86.chunk.js",
-    "static/js/2.572fdc86.chunk.js.map": "/Open-Badge/static/js/2.572fdc86.chunk.js.map",
+    "static/js/2.f860fed5.chunk.js": "/Open-Badge/static/js/2.f860fed5.chunk.js",
+    "static/js/2.f860fed5.chunk.js.map": "/Open-Badge/static/js/2.f860fed5.chunk.js.map",
     "index.html": "/Open-Badge/index.html",
-    "precache-manifest.b8430813cc2612eefcd5879504e29db9.js": "/Open-Badge/precache-manifest.b8430813cc2612eefcd5879504e29db9.js",
+    "precache-manifest.f290641bc52ee9e6162f33bd9d26d4b6.js": "/Open-Badge/precache-manifest.f290641bc52ee9e6162f33bd9d26d4b6.js",
     "service-worker.js": "/Open-Badge/service-worker.js",
-    "static/css/main.e7b21668.chunk.css.map": "/Open-Badge/static/css/main.e7b21668.chunk.css.map",
-    "static/js/2.572fdc86.chunk.js.LICENSE.txt": "/Open-Badge/static/js/2.572fdc86.chunk.js.LICENSE.txt",
+    "static/css/main.9dc530d7.chunk.css.map": "/Open-Badge/static/css/main.9dc530d7.chunk.css.map",
+    "static/js/2.f860fed5.chunk.js.LICENSE.txt": "/Open-Badge/static/js/2.f860fed5.chunk.js.LICENSE.txt",
     "static/media/Icon.svg": "/Open-Badge/static/media/Icon.68126e31.svg",
     "static/media/Inner.svg": "/Open-Badge/static/media/Inner.fc6ffbcb.svg",
     "static/media/Notification.svg": "/Open-Badge/static/media/Notification.05e16d06.svg",
@@ -22,13 +22,14 @@
     "static/media/codesandbox1.svg": "/Open-Badge/static/media/codesandbox1.b236d370.svg",
     "static/media/pen-tool.svg": "/Open-Badge/static/media/pen-tool.e6eb6671.svg",
     "static/media/pen-tool1.svg": "/Open-Badge/static/media/pen-tool1.0a8e044f.svg",
+    "static/media/plus1.svg": "/Open-Badge/static/media/plus1.c32f4433.svg",
     "static/media/user.svg": "/Open-Badge/static/media/user.ed52f187.svg",
     "static/media/user1.svg": "/Open-Badge/static/media/user1.6ac01e8a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e8fcf448.js",
-    "static/js/2.572fdc86.chunk.js",
-    "static/css/main.e7b21668.chunk.css",
-    "static/js/main.bd451f34.chunk.js"
+    "static/js/2.f860fed5.chunk.js",
+    "static/css/main.9dc530d7.chunk.css",
+    "static/js/main.482ceaff.chunk.js"
   ]
 }

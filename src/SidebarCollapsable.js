@@ -1,4 +1,5 @@
 import React from 'react'
+import Create from './Assets/plus1.svg'
 import User from './Assets/user1.svg'
 import Created from './Assets/codesandbox1.svg'
 import Drafts from './Assets/pen-tool1.svg'
@@ -15,10 +16,10 @@ function SidebarCollapsable(props) {
                     
                     { props.collapse &&
                     <div className="SidebarRow__container"  style={{backgroundColor:themes.header}} onClick={()=>props.setCollapse(!props.collapse)}>
-                            
                         <SidebarRow Icon={User} title="Home" color="white" fromSidebar={false}/>
                         <SidebarRow Icon={Created} title="Created Badges" color="white" fromSidebar={false}/>
                         <SidebarRow Icon={Drafts} title="Drafts" color="white" fromSidebar={false}/>
+                        <SidebarRow Icon={Create} title="Create Badge" color="white" fromSidebar={false}/>
                     </div>
                     }
                 </div>

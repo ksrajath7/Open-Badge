@@ -7,19 +7,6 @@ import './Home.css'
 function Home() {
     const themes = React.useContext(ThemeContext)
 
-    const [width, setWidth] = React.useState(window.innerWidth)
-    const breakpoint = 800
-    React.useEffect(() => {
-        
-        window.addEventListener("resize", () => setWidth(window.innerWidth));
-    
-      }, []);
-
-    let homeStyle={flex:"0.85"}
-
-    if(width<=breakpoint){
-        homeStyle.flex="1"
-    }
     const Button1 = withRouter(({history})=>(
         <Button style={{borderRadius:"0px", color:themes.header}} onClick={()=>{
             history.push(process.env.PUBLIC_URL+'/Create Badge')
@@ -28,7 +15,7 @@ function Home() {
         
 
     return (
-        <div className="home" style={homeStyle}>
+        <div className="home">
              <div style={{display:"flex"}}>
                 <div className="homeHeading">
                     <h2>Home Page</h2>

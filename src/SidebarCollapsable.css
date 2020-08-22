@@ -8,26 +8,6 @@
     height:100%;
 }
 
-.searchBar{
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    display:flex;
-    align-items: center;
-    border:1px solid;
-}
-
-.searchButton{
-    width:50px !important;
-}
-
-.searchBar > input{
-    padding: 10px;
-    flex:1;
-    border: none;
-}
-
-
 hr{
     height: 1px;
     border:0;

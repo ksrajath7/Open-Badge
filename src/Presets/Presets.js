@@ -22,7 +22,7 @@ function Presets(props) {
                     props.setTextCoverSource('')
                     }}>
                         <center>
-                        <svg width="auto" height="auto" viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg" className="presetSvg">
                             <g>
                                 <path d={element.path} fill={element.pathColor} transform={element.pathTranslate}/>
                                 <path d={element.inner} fill={element.innerColor} transform={element.innerTranslate}/>

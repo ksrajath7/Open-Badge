@@ -15,37 +15,28 @@ function Header(props) {
     const themes = React.useContext(ThemeContext)
     const [collapse, setCollapse] = React.useState(false)
 
-    const [width, setWidth] = React.useState(window.innerWidth)
-    const breakpoint = 800
-
-    React.useEffect(() => {
-        
-        window.addEventListener("resize", () => setWidth(window.innerWidth));
-    
-      }, []);
-      
     return (
         <div className="headerContainer">
             <div className="header" style={{backgroundColor:themes.header}}>
         
-                { width<=breakpoint &&
-                <div style={{color:"white"}} onClick={()=>setCollapse(!collapse)}>
+                <div className="collapseIcon" onClick={()=>setCollapse(!collapse)}>
                     {collapse && <CloseIcon/>}
                     {!collapse && <MenuIcon/>}
                 </div>
-                }
 
                 
-                    <div style={{display:"flex", alignItems:"center"}}>
-                        <Link to={`${process.env.PUBLIC_URL}/`}>
-                            <img className="header__logo" src={OpenBadge} alt="LOGO"></img>
-                        </Link>
-                        { width>breakpoint &&
-                        <h2 className="header__title">Open Badge</h2>
-                        }
-                    </div>
-                    
-                <img src={Notification} alt="noti"></img>
+                <div style={{display:"flex", alignItems:"center"}}>
+                    <Link to={`${process.env.PUBLIC_URL}/`}>
+                        <img className="header__logo" src={OpenBadge} alt="LOGO"></img>
+                    </Link>
+                    <h2 className="header__title">Open Badge</h2>
+                </div>
+                <div style={{display:"flex", alignItems:"center"}}>
+                    <Link to={`${process.env.PUBLIC_URL}/Create Badge`} style={{textDecoration:"none"}}>
+                        <button className="createNew">Create new badge</button>
+                    </Link>
+                    <img src={Notification} alt="noti"></img>
+                </div>
                 
                 {/* <Switch
                     isOn={props.theme}
@@ -53,7 +44,7 @@ function Header(props) {
                 /> */}
            
             </div>
-                { width<=breakpoint && collapse &&
+                { collapse &&
                     <SidebarCollapsable collapse={collapse} setCollapse={setCollapse}></SidebarCollapsable>
                 }
         </div>

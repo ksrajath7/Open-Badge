@@ -2,8 +2,13 @@
     padding-top: 25px;
     padding-left: 20px;
     padding-right: 20px;
+    flex: 1;
 }
 
 .homeHeading{
     flex: 1;
 }
+
+@media (min-width: 800px) {
+    .home{flex: 0.85}
+    }

@@ -2,6 +2,7 @@
     padding-top: 25px;
     padding-left: 20px;
     padding-right: 20px;
+    flex:1;
 }
 
 .heading{
@@ -19,7 +20,7 @@
 }
 
 .space{
-    flex: 0.5;
+    flex: 0;
 }
 
 .input1{
@@ -67,6 +68,10 @@
     font-size: 12px;
 }
 
+.createdBadgeSvg{
+    height: auto;
+    width: auto;
+}
 
 @media (min-width: 100px) {
 .badgeContainer { grid-template-columns: repeat(2, 1fr);}
@@ -75,6 +80,8 @@
 .badgeContainer { grid-template-columns: repeat(3, 1fr);}
 }
 @media (min-width: 800px) {
+.createdBadges{flex: 0.85}
+.space{flex: 0.5}
 .badgeContainer { grid-template-columns: repeat(4, 1fr);}
 .heading { grid-template-columns: repeat(2, 1fr);}
 }

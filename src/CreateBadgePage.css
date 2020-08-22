@@ -1,12 +1,30 @@
 
 .createBadgePage{
-    display:flex;
-    flex:1;
+    flex: 1;
+}
+
+.createBadgeHeader{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    color: white;
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC); 
+    background: linear-gradient(to right, #B06AB3, #4568DC); 
+}
+
+.backButton{
+    cursor: pointer;
+}
+
+.createBadgeBody{
+    display: flex;
 }
 
 .presetTab{
-    flex:0.2;
-    display: flex;
+    flex: 0.2;
+    display: none;
     flex-direction: column;
 }
 
@@ -19,6 +37,7 @@
 .presets{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     padding-top:10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -32,6 +51,7 @@
 }
 
 .create{
+    flex: 1;
     padding-top: 0px;
     padding-bottom: 20px;
     padding-right: 20px;
@@ -75,6 +95,12 @@
     /* box-shadow: 2px 2px 10px 2px #ededed; */
 }
 
+.svgClass{
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
 .details{
     display: flex;
 }
@@ -85,14 +111,6 @@
 }
 
 .badgeName{
-    margin-top:10px;
-    flex:0.5;
-    border-radius: 10px;
-    padding: 10px;
-    border:1px solid;
-}
-
-.badgeName__mobileView{
     margin-top:10px;
     flex:1;
     border-radius: 10px;
@@ -112,8 +130,9 @@
     cursor: pointer;
     margin-top: 20px;
     border:none;
+    font-family: Inter;
+    font-size: 14px;
     color:white;
-    font-size: medium;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -134,9 +153,17 @@
 }
 
 .models{
+    display: none;
     padding-top: 20px;
     flex:0.15;
     background-color: red;
+    padding-bottom: 20px;
+    margin-bottom:20px;
+}
+
+.models__mobileView{
+    padding-top: 20px;
+    flex:0.15;
     padding-bottom: 20px;
     margin-bottom:20px;
 }
@@ -145,6 +172,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -164,7 +192,7 @@
 
 .tools{
     padding-top: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     flex:0.05;
     align-items: center;
@@ -178,4 +206,16 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+@media (min-width: 800px) {
+.presetTab{display: flex;}
+.presetTab__mobileView{display: none;}
+.create{flex: 0.8;}
+.tools__mobileView{display: none;}
+.models__mobileView{display: none;}
+.models{display: block;}
+.tools{display: flex;}
+.svgClass{width: 322px; height: 322px;}
+.badgeName{flex: 0.5}
 }

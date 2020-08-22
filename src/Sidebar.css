@@ -1,11 +1,17 @@
 
 .sidebar{
-    flex:0.15;
+    display: none;
+    flex: 0.15;
+    padding-top: 20px;
 }
 
 .sidebar >hr{
     height: 1px;
-    border:0;
-    margin-top:10px;
+    border: 0;
+    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+@media(min-width:800px){
+    .sidebar{display: block;}
 }

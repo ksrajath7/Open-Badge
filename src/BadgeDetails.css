@@ -1,4 +1,23 @@
 .badgeDetails{
+    flex:1;
+}
+
+.badgeDetailsHeader{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    color: white;
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC); 
+    background: linear-gradient(to right, #B06AB3, #4568DC); 
+}
+
+.backButton1{
+    cursor: pointer;
+}
+
+.badgeDetailsBody{
     display:flex;
     flex:1;
 }
@@ -6,8 +25,7 @@
 .sideTab{
     padding-top: 10px;
     flex:0.2;
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 
 .sideTab__mobileView{
@@ -54,6 +72,7 @@
 }
 
 .detailsSection{
+    flex: 1;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
@@ -126,3 +145,8 @@
     flex: 1;
 }
 
+@media (min-width: 800px) {
+    .sideTab{display: flex; flex-direction: column;}
+    .sideTab__mobileView{display: none}
+    .detailsSection{flex: 0.4;}
+    }

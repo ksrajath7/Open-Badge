@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import ThemeContext from './theme-context'
 import './SidebarRow.css'
 
@@ -17,16 +17,19 @@ function SidebarRow({title, Icon, selected, color, fromSidebar}) {
         selectedBackgroundStyle={background:themes.selectedColor, borderRadius:"7px"}
         selectedTitleStyle.fontWeight="700"
     }
-
+    
+    const Row = withRouter(({history})=>(
+        <div className={rowClassName} style={selectedBackgroundStyle} onClick={()=>{
+            history.push(process.env.PUBLIC_URL+'/'+title)
+        }}>
+            <img src={Icon} alt=""/>
+            <h2 className="sidebarRow__title" style={selectedTitleStyle}>{title}</h2>
+        </div>
+    ))
 
     
     return (
-        <NavLink to={`${process.env.PUBLIC_URL}/${title}`} style={{textDecoration:'none'}} activeStyle={{color:'red'}}>
-            <div className={rowClassName} style={selectedBackgroundStyle}>
-                <img src={Icon} alt=""/>
-                <h2 className="sidebarRow__title" style={selectedTitleStyle}>{title}</h2>
-            </div>
-        </NavLink>
+            <Row/>
     )
 }
 

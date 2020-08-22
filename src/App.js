@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header'
 import Sidebar from './Sidebar';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import './App.css'
 import ThemeContext, { themes } from './theme-context'
 import CreateBadgePage from './CreateBadgePage';
@@ -13,7 +13,7 @@ import Home from './Home';
 function App() {
 
   console.log("hi from App")
-  
+
   let themeValue = themes.light
   const [darkTheme, setTheme] = React.useState(false)
   if(darkTheme){
@@ -29,19 +29,20 @@ function App() {
 
     <div className="app" style={{backgroundColor:themeValue.background}}>
       <BrowserRouter>
-        <Header theme={darkTheme} setTheme={setTheme}/>
         <Switch>
-          <Route exact path={`${process.env.PUBLIC_URL}/`} render={
+          <Route exact path={`${process.env.PUBLIC_URL}/`}>
+            <Redirect to={`${process.env.PUBLIC_URL}/Home`}/>
+          </Route>
+          <Route path={`${process.env.PUBLIC_URL}/Home`} render={
             ()=>
-              <Home/>
+              <>
+                <Header theme={darkTheme} setTheme={setTheme}/>
+                <div className="app__page">
+                  <Sidebar home={true} createdBadges={false} drafts={false}/>
+                  <Home/>
+                </div>
+              </>
               }>
-            
-            </Route>
-
-          <Route path={`${process.env.PUBLIC_URL}/badge/:badgeId`} render={
-            (props)=>
-              <BadgeDetails a={props.match.params.badgeId}/>
-              } >
           
           </Route>
           <Route path={`${process.env.PUBLIC_URL}/Create Badge`} render={
@@ -50,30 +51,33 @@ function App() {
               }>
           
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/Created Badges`} render={
-            ()=>
-              <div className="app__page">
-                <Sidebar home={false} createdBadges={true} drafts={false}/>
-                <CreatedBadges title="All your created badges"/>
-              </div>
-              }>
+          <Route path={`${process.env.PUBLIC_URL}/badge/:badgeId`} render={
+            (props)=>
+              <BadgeDetails a={props.match.params.badgeId}/>
+              } >
           
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/Home`} render={
+          <Route path={`${process.env.PUBLIC_URL}/Created Badges`} render={
             ()=>
-              <div className="app__page">
-                <Sidebar home={true} createdBadges={false} drafts={false}/>
-                <Home/>
-              </div>
+              <>
+                <Header theme={darkTheme} setTheme={setTheme}/>
+                <div className="app__page">
+                  <Sidebar home={false} createdBadges={true} drafts={false}/>
+                  <CreatedBadges title="All your created badges"/>
+                </div>
+              </>
               }>
           
           </Route>
           <Route path={`${process.env.PUBLIC_URL}/Drafts`} render={
             ()=>
-              <div className="app__page">
-                <Sidebar home={false} createdBadges={false} drafts={true}/>
-                <CreatedBadges title="Drafts"/>
-              </div>
+              <>
+                <Header theme={darkTheme} setTheme={setTheme}/>
+                <div className="app__page">
+                  <Sidebar home={false} createdBadges={false} drafts={true}/>
+                  <CreatedBadges title="Drafts"/>
+                </div>
+              </>
               }>
           
           </Route>

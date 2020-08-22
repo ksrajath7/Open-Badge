@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0304b837a10f59e89eb601864cd9e002",
+    "revision": "9e23e30a4b0e2f5ec44bb265cfc44d06",
     "url": "/Open-Badge/index.html"
   },
   {
-    "revision": "ec246e4585f0fe7563c8",
+    "revision": "de2c14b7a39d60581726",
     "url": "/Open-Badge/static/css/main.9dc530d7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Open-Badge/static/js/2.f860fed5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec246e4585f0fe7563c8",
-    "url": "/Open-Badge/static/js/main.66ed5d80.chunk.js"
+    "revision": "de2c14b7a39d60581726",
+    "url": "/Open-Badge/static/js/main.dae690f3.chunk.js"
   },
   {
     "revision": "3b7812067c3efae3af9d",

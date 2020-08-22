@@ -23,7 +23,6 @@ function Header(props) {
                     {collapse && <CloseIcon/>}
                     {!collapse && <MenuIcon/>}
                 </div>
-
                 
                 <div style={{display:"flex", alignItems:"center"}}>
                     <Link to={`${process.env.PUBLIC_URL}/`}>
@@ -31,6 +30,7 @@ function Header(props) {
                     </Link>
                     <h2 className="header__title">Open Badge</h2>
                 </div>
+                
                 <div style={{display:"flex", alignItems:"center"}}>
                     <Link to={`${process.env.PUBLIC_URL}/Create Badge`} style={{textDecoration:"none"}}>
                         <button className="createNew">Create new badge</button>

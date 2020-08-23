@@ -15,8 +15,9 @@
 
 
 .frame{
+    font-family: Inter;
     border:none;
-    height: 50px;
+    height: 60px;
     width: 60px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -33,9 +34,10 @@
 }
 
 .frame.selected{
+    font-family: Inter;
     cursor: pointer;
     border:2px solid tan;
-    height: 50px;
+    height: 60px;
     width: 60px;
     margin-bottom: 10px;
     margin-top: 10px;

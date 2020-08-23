@@ -1,9 +1,9 @@
 import React from 'react'
 import './Toolbox.css'
-import IconModel from '../Assets/Icon.svg'
-import Inner from '../Assets/Inner.svg'
-import Text from '../Assets/Text.svg'
-import TextCover from '../Assets/TextCover.svg'
+import IconModel from '../Assets/star.svg'
+import Inner from '../Assets/shield.svg'
+import Text from '../Assets/text.svg'
+import Color from '../Assets/colors.svg'
 
 function Toolbox(props) {
     
@@ -17,7 +17,8 @@ function Toolbox(props) {
                     props.setColors(false)
                     
                     }}>
-            <img className="createBadge__tool" src={Inner} alt="shield"/>
+            <img  src={Inner} alt="shield"/>
+            Shield
         </button>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.iconModel && "selected"}`} onClick={()=>{
                 props.setInnerShield(false)
@@ -27,7 +28,8 @@ function Toolbox(props) {
                 props.setColors(false)
                 
                 }}>
-            <img className="createBadge__tool__star" src={IconModel} alt="icon"/>
+            <img src={IconModel} alt="icon"/>
+            Icon
         </button>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.text && "selected"}`} onClick={()=>{
                 props.setInnerShield(false)
@@ -37,7 +39,8 @@ function Toolbox(props) {
                 props.setColors(false)
                 
                 }}>
-            <img className="createBadge__tool__star" src={Text} alt="tex"/>
+            <img  src={Text} alt="tex"/>
+            Text
         </button>
         <button style={{background:props.themes.sectionBackground}} className={`frame ${props.colors && "selected"}`} onClick={()=>{
                 props.setInnerShield(false)
@@ -47,7 +50,8 @@ function Toolbox(props) {
                 props.setColors(true)
                 
                 }}>
-            <img className="createBadge__tool__star" src={TextCover} alt="tex"/>
+            <img src={Color} alt="tex"/>
+            Colors
         </button>
         </>
     )

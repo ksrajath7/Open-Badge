@@ -16,7 +16,7 @@
 .modelFrame{
     
     cursor: pointer;
-    border:none;
+    border: none;
     background-color: transparent;
     height: 70px;
     width: 80px;
@@ -25,24 +25,70 @@
 }
 
 .modelFrame:hover{
-    border:2px solid tan;
+    border: 2px solid tan;
     cursor: pointer;
 }
 
 .modelFrame:focus{
-    border:none;
+    border: none;
 }
 
 .searchBar2{
-    flex:1;
+    display: flex;
+    flex: 1;
     margin-top: 10px;
     margin-bottom: 10px;
-    border:1px solid;
+    border: 1px solid;
 }
-
 
 .input{
     padding: 10px;
-    flex:1;
-    border:none;
+    flex: 1;
+    border: none;
+    font-family: Inter;
+}
+
+.colorsContainer{
+    flex: 1;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.colorsContainer > div{
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+}
+
+.selectColor{
+    width: 40px;
+    border: none;
+    background: none;
+}
+
+.hexCodeContainer{
+    flex: 1;
+    display: flex;
+    border-radius: 5px;
+}
+
+.hexCode{
+    letter-spacing: 1px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex: 1;
+    border: none;
+    font-family: Inter;
+    background: none;
+}
+
+@media (min-width: 800px) {
+    .colorsContainer{grid-template-columns: repeat(1, 1fr);}
 }

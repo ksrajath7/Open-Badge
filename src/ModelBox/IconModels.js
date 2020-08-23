@@ -1,6 +1,6 @@
 import React from 'react'
 import './ModelboxItems.css'
-import Paths from '../ModelBox/Paths/Paths'
+import {Paths} from '../ModelBox/Paths/Paths'
 
 function IconModels(props) {
     return (

@@ -11,8 +11,8 @@ function Shields(props) {
                     props.setShieldSource(element.path)
                     props.setTranslateShield(element.pathTranslate)
                 }}>
-                    <svg fill="#ccc" className="createBadge__model" height="322" width="322" viewBox="0 0 322 322">
-                        <path d={element.path} transform={element.pathTranslate}></path>
+                    <svg className="createBadge__model" height="322" width="322" viewBox="0 0 322 322">
+                        <path d={element.path} transform={element.pathTranslate} fill="#B5AC49"></path>
                     </svg>
                 </button>
                 )

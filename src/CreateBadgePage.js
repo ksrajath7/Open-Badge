@@ -9,6 +9,7 @@ import {Paths} from './ModelBox/Paths/Paths'
 import './CreateBadgePage.css'
 import { withRouter } from 'react-router-dom'
 import InnerShields from './ModelBox/InnerShields'
+import {saveSvgAsPng, svgAsPngUri} from 'save-svg-as-png'
 
 function CreateBadgePage() {
 
@@ -16,7 +17,6 @@ function CreateBadgePage() {
     const [badgeId] = React.useState('123456')
 
     const [editPreset, setEditPreset] = React.useState(false)
-    const [downloadSvg, setDownloadSvg] = React.useState(false)
 
     const [innerShield, setInnerShield] = React.useState(true)
     const [iconModel, setIconModel] = React.useState(false)
@@ -81,104 +81,24 @@ function CreateBadgePage() {
     const downloadSvgFunction=()=>{
         
         var svg = document.querySelector('#my_badge');
-
-
         if(svg){
-            var img= new Image(),
-            serializer = new XMLSerializer(),
-            svgstr = serializer.serializeToString(svg)
-        
-        img.src= 'data:image/svg+xml;utf8,'+svgstr
-
-        var canvas = document.createElement("canvas")
-        var w = 800
-        var h = 400
-
-        canvas.width = w
-        canvas.height = h
-        canvas.getContext("2d").drawImage(img,0,0,w,h)
-        var imgURL = canvas.toDataURL("image/png")
-
-        var dLink = document.createElement('a')
-        dLink.download="image.png"
-        dLink.href=imgURL
-        dLink.dataset.downloadurl = ["image/png", dLink.download, dLink.href].join(":")
-        document.getElementById("imm").appendChild(dLink)
-        dLink.click()
-        //document.getElementById("imm").removeChild(dLink)
-
-
+            svgAsPngUri(svg, Option).then(uri=>{console.log(uri)})
+            saveSvgAsPng(svg, "my_badge.png")
         }
-        // if(svg){
-        //     let {width,height}=svg.getBBox()
-        //     let cloned = svg.cloneNode(true)
-        //     let outerHTML = cloned.outerHTML,
-        //      blob = new Blob([outerHTML],
-        //         {type:'image/svg+xml;charset=utf-8'});
-        //     let URL = window.URL || window.webkitURL || window
-        //     let blobURL = URL.createObjectURL(blob);
-        //     let image = new Image()
-        //     image.onload=()=>{
-        //         let can
-        //     }
-        // }
-
-
-
-        // var canvas = document.createElement('canvas')
-        // var ctx = canvas.getContext("2d")
-        // var image = new Image();
-
-        // console.log("here")
-
-
-        
-        // image.onload=()=>{
-        //         console.log("here too")
-        //         image.src="data:image/svg+xml,"+svg.outerHTML
-        //     ctx.drawImage(image, 200, 200, 322, 322)
-        //     canvas.toBlob(function(blob){
-
-        //         var newImg = document.createElement("img"),
-        //         url = URL.createObjectURL(blob)
-        //         console.log("here too")
-        //         newImg.onload = function(){
-        //             URL.revokeObjectURL(url)
-        //         }
-        //         newImg.src=url
-        //         console.log(url)
-        //         var event = new MouseEvent('click', {
-        //             'view': window,
-        //             'bubbles' : true,
-        //             'cancelable' : true
-        //         })
-        
-        //         var a=document.createElement('a')
-        //         a.setAttribute('download', 'badge.png')
-        //         a.setAttribute('href', url)
-        //         a.dispatchEvent(event)
-        //         document.getElementById('imm').appendChild(newImg)
-        //     })
-            
-        // }
-        
-            
-
+        else{
+            window.alert("Please create a badge or edit a preset")
+        }
         
 
-        
-        // var downloadButton = document.querySelector('#downloadButton');
-        // downloadButton.insertAdjacentHTML('beforebegin', `<a href-lang="image/svg+xml" href=data:image/svg+xml;utf8,${escape(svg.outerHTML)} download="new_svg.svg">download svg</a>`)
+
+
+
+
+
+
+
 
     }
-
-
-
-
-
-
-
-
 
 
     return (
@@ -323,22 +243,8 @@ function CreateBadgePage() {
                     <div className="inputWrap">
                         {/* <SelectRecepient/> */}
 
-                        <h5 onClick={()=>{
-                            setDownloadSvg(true)
-                        }}>Download</h5>
-
-                        { downloadSvg && 
-                        
-                        <button id="downloadButton" className="createButton" style={{backgroundColor:themes.header }}  onClick={()=>{
-                            downloadSvgFunction()
-                        }}>
-                            Download SVG
-                            </button>
-                        }
-
-                        <div id="imm">hudsduhjsd</div>
-
-
+                        <button id="downloadButton" className="createButton" style={{backgroundColor:themes.header }}
+                                onClick={()=>{ downloadSvgFunction() }}>Download PNG</button>
 
                         {/* <button className="draftButton">Save to drafts</button> */}
                     </div>

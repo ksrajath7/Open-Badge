@@ -81,6 +81,34 @@ function CreateBadgePage() {
     const downloadSvgFunction=()=>{
         
         var svg = document.querySelector('#my_badge');
+
+
+        if(svg){
+            var img= new Image(),
+            serializer = new XMLSerializer(),
+            svgstr = serializer.serializeToString(svg)
+        
+        img.src= 'data:image/svg+xml;utf8,'+svgstr
+
+        var canvas = document.createElement("canvas")
+        var w = 800
+        var h = 400
+
+        canvas.width = w
+        canvas.height = h
+        canvas.getContext("2d").drawImage(img,0,0,w,h)
+        var imgURL = canvas.toDataURL("image/png")
+
+        var dLink = document.createElement('a')
+        dLink.download="image.png"
+        dLink.href=imgURL
+        dLink.dataset.downloadurl = ["image/png", dLink.download, dLink.href].join(":")
+        document.getElementById("imm").appendChild(dLink)
+        dLink.click()
+        //document.getElementById("imm").removeChild(dLink)
+
+
+        }
         // if(svg){
         //     let {width,height}=svg.getBBox()
         //     let cloned = svg.cloneNode(true)
@@ -96,6 +124,43 @@ function CreateBadgePage() {
         // }
 
 
+
+        // var canvas = document.createElement('canvas')
+        // var ctx = canvas.getContext("2d")
+        // var image = new Image();
+
+        // console.log("here")
+
+
+        
+        // image.onload=()=>{
+        //         console.log("here too")
+        //         image.src="data:image/svg+xml,"+svg.outerHTML
+        //     ctx.drawImage(image, 200, 200, 322, 322)
+        //     canvas.toBlob(function(blob){
+
+        //         var newImg = document.createElement("img"),
+        //         url = URL.createObjectURL(blob)
+        //         console.log("here too")
+        //         newImg.onload = function(){
+        //             URL.revokeObjectURL(url)
+        //         }
+        //         newImg.src=url
+        //         console.log(url)
+        //         var event = new MouseEvent('click', {
+        //             'view': window,
+        //             'bubbles' : true,
+        //             'cancelable' : true
+        //         })
+        
+        //         var a=document.createElement('a')
+        //         a.setAttribute('download', 'badge.png')
+        //         a.setAttribute('href', url)
+        //         a.dispatchEvent(event)
+        //         document.getElementById('imm').appendChild(newImg)
+        //     })
+            
+        // }
         
             
 

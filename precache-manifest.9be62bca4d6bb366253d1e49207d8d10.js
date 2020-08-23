@@ -1,35 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e23e30a4b0e2f5ec44bb265cfc44d06",
+    "revision": "92235fbc2ac83d04ccdd59b5b02740be",
     "url": "/Open-Badge/index.html"
   },
   {
-    "revision": "de2c14b7a39d60581726",
-    "url": "/Open-Badge/static/css/main.9dc530d7.chunk.css"
+    "revision": "cc7308085c46dc056419",
+    "url": "/Open-Badge/static/css/main.52861d16.chunk.css"
   },
   {
-    "revision": "ee713d1cf5534cd76950",
-    "url": "/Open-Badge/static/js/2.f860fed5.chunk.js"
+    "revision": "67ae34890f88c6794251",
+    "url": "/Open-Badge/static/js/2.20b77939.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/Open-Badge/static/js/2.f860fed5.chunk.js.LICENSE.txt"
+    "url": "/Open-Badge/static/js/2.20b77939.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de2c14b7a39d60581726",
-    "url": "/Open-Badge/static/js/main.dae690f3.chunk.js"
+    "revision": "cc7308085c46dc056419",
+    "url": "/Open-Badge/static/js/main.5f8e491d.chunk.js"
   },
   {
     "revision": "3b7812067c3efae3af9d",
     "url": "/Open-Badge/static/js/runtime-main.e8fcf448.js"
-  },
-  {
-    "revision": "68126e3173de236b34d6a9e1f679b929",
-    "url": "/Open-Badge/static/media/Icon.68126e31.svg"
-  },
-  {
-    "revision": "fc6ffbcb5397fee43be0a7e4be5a8a44",
-    "url": "/Open-Badge/static/media/Inner.fc6ffbcb.svg"
   },
   {
     "revision": "05e16d061e8e402a1c429967f803b451",
@@ -40,20 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Open-Badge/static/media/OpenBadge.525f7ce5.svg"
   },
   {
-    "revision": "c9c83ec121e3496ce232e2f82932b213",
-    "url": "/Open-Badge/static/media/Text.c9c83ec1.svg"
-  },
-  {
-    "revision": "6899e1f8a248e3f729aa64772710bdc4",
-    "url": "/Open-Badge/static/media/TextCover.6899e1f8.svg"
-  },
-  {
     "revision": "0a83e818381008df478da9653a3b3422",
     "url": "/Open-Badge/static/media/codesandbox.0a83e818.svg"
   },
   {
     "revision": "b236d37097da1585385549b3123ad316",
     "url": "/Open-Badge/static/media/codesandbox1.b236d370.svg"
+  },
+  {
+    "revision": "13b61ea8d36278fe3ea80f247ff10819",
+    "url": "/Open-Badge/static/media/colors.13b61ea8.svg"
   },
   {
     "revision": "e6eb6671100e59712fb51a636ed32e3f",
@@ -66,6 +54,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c32f4433df2e47614ee3bbb336f8661d",
     "url": "/Open-Badge/static/media/plus1.c32f4433.svg"
+  },
+  {
+    "revision": "eac730ac4b3435c0be512501e152b1b8",
+    "url": "/Open-Badge/static/media/shield.eac730ac.svg"
+  },
+  {
+    "revision": "2c08d73abb256c9a94faeb37f3c04911",
+    "url": "/Open-Badge/static/media/star.2c08d73a.svg"
+  },
+  {
+    "revision": "447f36712fa0fccabe256d5a46e63bb9",
+    "url": "/Open-Badge/static/media/text.447f3671.svg"
   },
   {
     "revision": "ed52f187b2c4aad7fd02765c9cdc2f92",

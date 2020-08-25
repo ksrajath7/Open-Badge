@@ -2,6 +2,7 @@ import React from 'react'
 import ThemeContext from './theme-context'
 import { Button } from '@material-ui/core'
 import {Paths} from './ModelBox/Paths/Paths'
+import Badge from './Assets/badge.svg'
 import './CreatedBadges.css'
 
 function CreatedBadges(props) {
@@ -36,14 +37,7 @@ function CreatedBadges(props) {
                             Edit
                         </div>
                     </div>
-                    <svg className="createdBadgeSvg" viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <path d={Paths.presets[0].path} fill={Paths.presets[0].pathColor} transform={Paths.presets[0].pathTranslate}/>
-                            <path d={Paths.presets[0].inner} fill={Paths.presets[0].innerColor} transform={Paths.presets[0].innerTranslate}/>
-                            <path d={Paths.presets[0].iconModel} fill={Paths.presets[0].iconModelColor} transform={Paths.presets[0].iconModelTranslate}/>
-                            <text x="50%" y="70%" fontSize="40px" fill={Paths.presets[0].textColor} textAnchor="middle">{Paths.presets[0].text}</text>
-                        </g>
-                    </svg>
+                    <object type="image/svg+xml" id={Badge} data={Badge} alt="badge" className="presetSvg" aria-label=""></object>
                 </div>
             </div>
 

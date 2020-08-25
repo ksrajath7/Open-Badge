@@ -81,19 +81,16 @@
 }
 @media (min-width: 800px) {
 .createdBadges{flex: 0.85}
-.space{flex: 0.5}
 .badgeContainer { grid-template-columns: repeat(4, 1fr);}
-.heading { grid-template-columns: repeat(2, 1fr);}
 }
 @media (min-width: 1000px) {
 .badgeContainer { grid-template-columns: repeat(5, 1fr);}
+.space{flex: 0.5}
 .heading { grid-template-columns: repeat(2, 1fr);}
 }
 @media (min-width: 1200px) {
 .badgeContainer { grid-template-columns: repeat(6, 1fr);}
-.heading { grid-template-columns: repeat(2, 1fr);}
 }
 @media (min-width: 1400px) {
 .badgeContainer { grid-template-columns: repeat(7, 1fr);}
-.heading { grid-template-columns: repeat(2, 1fr);}
 }

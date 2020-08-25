@@ -176,10 +176,10 @@ function CreateBadgePage() {
                             { (innerSource || iconModelSource || textInputSource) &&
                             <center>
                             <svg id='my_badge' height="322" width="322" viewBox='0 0 322 322' xmlns='http://www.w3.org/2000/svg' style={{display:"flex"}}>
-                                    <path d={innerSource} fill={innerColor} transform={translateInner} stroke={shieldStrokeColor} strokeWidth={shieldStrokeWidth} strokeLinejoin='round'></path>
-                                    <path d={iconModelSource} fill={iconModelColor} transform={translateIconModel}></path>
-                                    <rect width={textCoverWidth} height='60' y='70%' fill={textCoverColor} transform={translateTextCover}></rect>
-                                    <text x='50%' y='83%' fontSize='40px' fill={textInputColor} textAnchor='middle'>{textInputSource}</text>
+                                    <path id="shield" d={innerSource} fill={innerColor} transform={translateInner} stroke={shieldStrokeColor} strokeWidth={shieldStrokeWidth} strokeLinejoin='round'></path>
+                                    <path id="icon" d={iconModelSource} fill={iconModelColor} transform={translateIconModel}></path>
+                                    <rect id="textCover" width={textCoverWidth} height='60' y='70%' fill={textCoverColor} transform={translateTextCover}></rect>
+                                    <text id="text" x='50%' y='83%' fontSize='40px' fill={textInputColor} textAnchor='middle'>{textInputSource}</text>
                             </svg>
                             <button onClick={()=>{
                                     setPresetVisible(false)

@@ -2,7 +2,7 @@ import React from 'react'
 import ThemeContext from './theme-context'
 import { Button } from '@material-ui/core'
 import {Paths} from './ModelBox/Paths/Paths'
-import Badge from './Assets/badge.svg'
+import Badge from './Assets/Presets/badge.svg'
 import './CreatedBadges.css'
 
 function CreatedBadges(props) {

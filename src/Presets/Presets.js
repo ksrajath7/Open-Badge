@@ -1,11 +1,20 @@
 import React from 'react'
 import {PresetArray} from '../ModelBox/Paths/Paths'
-import Badge from '../Assets/badge.svg'
+import Badge8 from '../Assets/Presets/badge8.svg'
+import Badge1 from '../Assets/Presets/badge1.svg'
+import Badge2 from '../Assets/Presets/badge2.svg'
+import Badge3 from '../Assets/Presets/badge3.svg'
+import Badge4 from '../Assets/Presets/badge4.svg'
+import Badge5 from '../Assets/Presets/badge5.svg'
+import Badge6 from '../Assets/Presets/badge6.svg'
+import Badge7 from '../Assets/Presets/badge7.svg'
+import Badge from '../Assets/Presets/badge.svg'
 import './Presets.css'
 
 function Presets(props) {
 
-    const [PresetsArray] = React.useState([{id:1, preset:Badge}])
+    const [PresetsArray] = React.useState([{id:0, preset:Badge},{id:1, preset:Badge1},{id:2, preset:Badge2},{id:3, preset:Badge3},{id:4, preset:Badge4},
+        {id:5, preset:Badge5},{id:6, preset:Badge6},{id:7, preset:Badge7},{id:8, preset:Badge8}])
     
     return (
         <>
@@ -45,7 +54,7 @@ function Presets(props) {
         } */}
         { PresetsArray.map((element)=>
         <button key={element.id} style={{background:props.themes.background}} className="presetFrame" onClick={()=>{
-            var svgImage=document.getElementById(element.id).contentDocument
+            var svgImage = document.getElementById(element.id).contentDocument
             var inner = svgImage.getElementById("shield")
             var iconModel = svgImage.getElementById("icon")
             var text = svgImage.getElementById("text")
@@ -70,7 +79,7 @@ function Presets(props) {
                 }}>
                         <center>
                         <object type="image/svg+xml" id={element.id} data={element.preset} alt="badge" className="presetSvg" aria-label=""></object>
-                    <h5 style={{cursor:"pointer", marginTop:"5px", color:props.themes.header}}>Edit</h5>
+                    <p className="editText" style={{color:props.themes.header}}>Edit</p>
                         </center>
         </button>
         )

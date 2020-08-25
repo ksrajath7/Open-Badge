@@ -9,7 +9,7 @@ import {Paths} from './ModelBox/Paths/Paths'
 import './CreateBadgePage.css'
 import { withRouter } from 'react-router-dom'
 import InnerShields from './ModelBox/InnerShields'
-import {saveSvgAsPng, svgAsPngUri} from 'save-svg-as-png'
+import {saveSvgAsPng, svgAsDataUri, svgAsPngUri} from 'save-svg-as-png'
 
 function CreateBadgePage() {
 
@@ -37,7 +37,7 @@ function CreateBadgePage() {
     const [shieldStrokeColor, setShieldStrokeColor] = React.useState('#403B4A')
 
     const [textCoverWidth, setTextCoverWidth] = React.useState('0')
-    const [textCoverStrokeWidth, setTextCoverStrokeWidth] = React.useState('10')
+    const [shieldStrokeWidth, setShieldStrokeWidth] = React.useState('10')
 
     const [translateTextCover, setTranslateTextCover] = React.useState()
     const [translateIconModel, setTranslateIconModel] = React.useState()
@@ -82,8 +82,11 @@ function CreateBadgePage() {
         
         var svg = document.querySelector('#my_badge');
         if(svg){
-            svgAsPngUri(svg, Option).then(uri=>{console.log(uri)})
-            saveSvgAsPng(svg, "my_badge.png")
+            window.alert("testing..")
+            // svgAsDataUri(svg).then(uri=>{console.log(uri)})
+            // svgAsPngUri(svg).then(uri=>{console.log(uri)})
+            // saveSvgAsPng(svg, "my_badge.png")
+            // svg.insertAdjacentHTML('beforebegin', `<a href-lang="image/svg+xml" href="data:image/svg+xml;utf8,${escape(svg.outerHTML)}" download="badge.svg">download svg</a>`)
         }
         else{
             window.alert("Please create a badge or edit a preset")
@@ -112,7 +115,7 @@ function CreateBadgePage() {
                         Presets
                     </div>
                     <div className="presets">
-                        <Presets themes={themes} setEditPreset={setEditPreset} setShieldStrokeColor={setShieldStrokeColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextCoverColor={setTextCoverColor} setTextInputColor={setTextInputColor} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTextCoverStrokeWidth={setTextCoverStrokeWidth} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} setTranslateTextCover={setTranslateTextCover} setTextCoverWidth={setTextCoverWidth} ></Presets>
+                        <Presets themes={themes} setEditPreset={setEditPreset} setShieldStrokeColor={setShieldStrokeColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextCoverColor={setTextCoverColor} setTextInputColor={setTextInputColor} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setShieldStrokeWidth={setShieldStrokeWidth} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} setTranslateTextCover={setTranslateTextCover} setTextCoverWidth={setTextCoverWidth} ></Presets>
                     </div>
                     <hr style={{backgroundColor:themes.searchBarBorder}}/>
                 </div>
@@ -144,7 +147,7 @@ function CreateBadgePage() {
                         </div>
                         { presetVisible &&
                         <div className="presets__mobileView">
-                            <Presets themes={themes} setEditPreset={setEditPreset} setShieldStrokeColor={setShieldStrokeColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextCoverColor={setTextCoverColor} setTextInputColor={setTextInputColor} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setTextCoverStrokeWidth={setTextCoverStrokeWidth} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} setTranslateTextCover={setTranslateTextCover} setTextCoverWidth={setTextCoverWidth} ></Presets>
+                            <Presets themes={themes} setEditPreset={setEditPreset} setShieldStrokeColor={setShieldStrokeColor} setInnerColor={setInnerColor} setIconModelColor={setIconModelColor} setTextCoverColor={setTextCoverColor} setTextInputColor={setTextInputColor} setTextInputSource={setTextInputSource} setTextCoverSource={setTextCoverSource} setInnerSource={setInnerSource} setIconModelSource={setIconModelSource} setShieldStrokeWidth={setShieldStrokeWidth} setTranslateInner={setTranslateInner} setTranslateIconModel={setTranslateIconModel} setTranslateTextCover={setTranslateTextCover} setTextCoverWidth={setTextCoverWidth} ></Presets>
                         </div>
                         }
                     </div>
@@ -155,9 +158,9 @@ function CreateBadgePage() {
                         <div className="spaceForSvg"></div>
                             { (!innerSource && !iconModelSource && !textInputSource) &&
                             <center>
-                            <svg viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg" className="svgClass">
+                            <svg height="322" width="322" viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg" className="svgClass">
                                 <g>
-                                    <path transform={Paths.shields[0].innerTranslate} fill="#eee" d={Paths.shields[0].inner} stroke="bleck" strokeWidth="10" strokeLinejoin="round"/>
+                                    <path transform={Paths.shields[0].innerTranslate} fill="#eee" d={Paths.shields[0].inner} stroke="black" strokeWidth="10" strokeLinejoin="round"/>
                                 </g>
                             </svg>
                             <button onClick={()=>{
@@ -172,8 +175,8 @@ function CreateBadgePage() {
                             }
                             { (innerSource || iconModelSource || textInputSource) &&
                             <center>
-                            <svg id='my_badge' viewBox='0 0 322 322' className='svgClass' xmlns='http://www.w3.org/2000/svg'>
-                                    <path d={innerSource} fill={innerColor} transform={translateInner} stroke={shieldStrokeColor} strokeWidth={textCoverStrokeWidth} strokeLinejoin='round'></path>
+                            <svg id='my_badge' height="322" width="322" viewBox='0 0 322 322' xmlns='http://www.w3.org/2000/svg' style={{display:"flex"}}>
+                                    <path d={innerSource} fill={innerColor} transform={translateInner} stroke={shieldStrokeColor} strokeWidth={shieldStrokeWidth} strokeLinejoin='round'></path>
                                     <path d={iconModelSource} fill={iconModelColor} transform={translateIconModel}></path>
                                     <rect width={textCoverWidth} height='60' y='70%' fill={textCoverColor} transform={translateTextCover}></rect>
                                     <text x='50%' y='83%' fontSize='40px' fill={textInputColor} textAnchor='middle'>{textInputSource}</text>
@@ -217,7 +220,7 @@ function CreateBadgePage() {
                         <IconModels setIconModelSource={setIconModelSource} setTranslateIconModel={setTranslateIconModel} />
                         }
                         { text &&
-                        <TextField textInputSource={textInputSource} setTextInputSource={setTextInputSource} setTextCoverStrokeWidth={setTextCoverStrokeWidth} themes={themes} />
+                        <TextField textInputSource={textInputSource} setTextInputSource={setTextInputSource} setShieldStrokeWidth={setShieldStrokeWidth} themes={themes} />
                         }
                         { colors &&
                         <div style={{width:"100%"}}>

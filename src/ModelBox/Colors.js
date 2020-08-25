@@ -69,7 +69,7 @@ function Colors(props) {
             <h5>Shield Stroke</h5>
             <div>
                 <input className="selectColor" value={props.shieldStrokeColor} type="color" onChange={value=>{
-                    props.setTextInputColor(value.target.value)
+                    props.setShieldStrokeColor(value.target.value)
                 }}></input>
                 <div className="hexCodeContainer">
                     <input type="text" className="hexCode" value={props.shieldStrokeColor} maxLength="7" onChange={value=>{

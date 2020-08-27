@@ -37,7 +37,7 @@ function CreatedBadges(props) {
                             Edit
                         </div>
                     </div>
-                    <object type="image/svg+xml" id={Badge} data={Badge} alt="badge" className="presetSvg" aria-label=""></object>
+                    <object type="image/svg+xml" id={Badge} data={Badge} alt="badge" className="createdBadgeSvg" aria-label=""></object>
                 </div>
             </div>
 

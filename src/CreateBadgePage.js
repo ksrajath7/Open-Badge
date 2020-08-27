@@ -9,7 +9,6 @@ import {Paths} from './ModelBox/Paths/Paths'
 import './CreateBadgePage.css'
 import { withRouter } from 'react-router-dom'
 import InnerShields from './ModelBox/InnerShields'
-import {saveSvgAsPng, svgAsDataUri, svgAsPngUri} from 'save-svg-as-png'
 
 function CreateBadgePage() {
 
@@ -68,14 +67,14 @@ function CreateBadgePage() {
 
 
 
-    // const SelectRecepient = withRouter(({history})=>(
-    //     <button className="createButton" style={{backgroundColor:themes.header }}  onClick={()=>{
+    const SelectRecepient = withRouter(({history})=>(
+        <button className="createButton" style={{backgroundColor:themes.header }}  onClick={()=>{
             // Perform steps for generating badge id
 
-    //         history.push(process.env.PUBLIC_URL+"/badge/"+badgeId)
-    //     }}>Select Recepients</button>
+            history.push(process.env.PUBLIC_URL+"/badge/"+badgeId)
+        }}>Select Recepients</button>
         
-    // ))
+    ))
 
 
     const downloadSvgFunction=()=>{
@@ -83,24 +82,10 @@ function CreateBadgePage() {
         var svg = document.querySelector('#my_badge');
         if(svg){
             window.alert("testing..")
-            // svgAsDataUri(svg).then(uri=>{console.log(uri)})
-            // svgAsPngUri(svg).then(uri=>{console.log(uri)})
-            // saveSvgAsPng(svg, "my_badge.png")
-            // svg.insertAdjacentHTML('beforebegin', `<a href-lang="image/svg+xml" href="data:image/svg+xml;utf8,${escape(svg.outerHTML)}" download="badge.svg">download svg</a>`)
         }
         else{
             window.alert("Please create a badge or edit a preset")
         }
-        
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -159,9 +144,7 @@ function CreateBadgePage() {
                             { (!innerSource && !iconModelSource && !textInputSource) &&
                             <center>
                             <svg height="322" width="322" viewBox="0 0 322 322" xmlns="http://www.w3.org/2000/svg" className="svgClass">
-                                <g>
-                                    <path transform={Paths.shields[0].innerTranslate} fill="#eee" d={Paths.shields[0].inner} stroke="black" strokeWidth="10" strokeLinejoin="round"/>
-                                </g>
+                                <path transform={Paths.shields[0].innerTranslate} fill="#eee" d={Paths.shields[0].inner} stroke="black" strokeWidth="10" strokeLinejoin="round"/>
                             </svg>
                             <button onClick={()=>{
                                     // setInnerSource(Paths.shields[0].inner)
@@ -176,10 +159,10 @@ function CreateBadgePage() {
                             { (innerSource || iconModelSource || textInputSource) &&
                             <center>
                             <svg id='my_badge' height="322" width="322" viewBox='0 0 322 322' xmlns='http://www.w3.org/2000/svg' style={{display:"flex"}}>
-                                    <path id="shield" d={innerSource} fill={innerColor} transform={translateInner} stroke={shieldStrokeColor} strokeWidth={shieldStrokeWidth} strokeLinejoin='round'></path>
-                                    <path id="icon" d={iconModelSource} fill={iconModelColor} transform={translateIconModel}></path>
-                                    <rect id="textCover" width={textCoverWidth} height='60' y='70%' fill={textCoverColor} transform={translateTextCover}></rect>
-                                    <text id="text" x='50%' y='83%' fontSize='40px' fill={textInputColor} textAnchor='middle'>{textInputSource}</text>
+                                <path id="shield" d={innerSource} fill={innerColor} transform={translateInner} stroke={shieldStrokeColor} strokeWidth={shieldStrokeWidth} strokeLinejoin='round'></path>
+                                <path id="icon" d={iconModelSource} fill={iconModelColor} transform={translateIconModel}></path>
+                                <rect id="textCover" width={textCoverWidth} height='60' y='70%' fill={textCoverColor} transform={translateTextCover}></rect>
+                                <text id="text" x='50%' y='83%' fontSize='40px' fill={textInputColor} textAnchor='middle'>{textInputSource}</text>
                             </svg>
                             <button onClick={()=>{
                                     setPresetVisible(false)
@@ -244,12 +227,8 @@ function CreateBadgePage() {
                     </div>
 
                     <div className="inputWrap">
-                        {/* <SelectRecepient/> */}
-
-                        <button id="downloadButton" className="createButton" style={{backgroundColor:themes.header }}
-                                onClick={()=>{ downloadSvgFunction() }}>Download PNG</button>
-
-                        {/* <button className="draftButton">Save to drafts</button> */}
+                        <SelectRecepient/>
+                        <button className="draftButton">Save to drafts</button>
                     </div>
 
 
